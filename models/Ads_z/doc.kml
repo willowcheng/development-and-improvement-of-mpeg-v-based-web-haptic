@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://earth.google.com/kml/2.1'>
+<Folder>
+    <name>Adsız</name>
+    <description><![CDATA[Created with <a href="http://sketchup.google.com/">Google SketchUp 6.4.247</a>]]></description>
+    <DocumentSource>SketchUp</DocumentSource>
+<visibility>1</visibility>
+<LookAt>
+<heading>342.628</heading>
+<tilt>66.0788</tilt>
+<latitude>41.03293503875985</latitude>
+<longitude>28.95003449133687</longitude>
+<range>11.88339289613347</range>
+<altitude>5.118138062746374</altitude>
+</LookAt>
+<Folder>
+<name>Tour</name>
+<Placemark>
+<name>Camera</name>
+<visibility>1</visibility>
+<LookAt>
+<heading>342.628</heading>
+<tilt>66.0788</tilt>
+<latitude>41.03293503875985</latitude>
+<longitude>28.95003449133687</longitude>
+<range>11.88339289613347</range>
+<altitude>5.118138062746374</altitude>
+</LookAt>
+</Placemark>
+</Folder>
+  <Placemark>
+    <name>Model</name>
+    <description><![CDATA[]]></description>
+    <Style id='default'>
+    </Style>
+    <Model>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <Location>
+            <longitude>28.950000000000</longitude>
+            <latitude>41.033000000000</latitude>
+            <altitude>0.000000000000</altitude>
+        </Location>
+        <Orientation>
+            <heading>0</heading>
+            <tilt>0</tilt>
+            <roll>0</roll>
+        </Orientation>
+        <Scale>
+            <x>1.0</x>
+            <y>1.0</y>
+            <z>1.0</z>
+        </Scale>
+        <Link>
+            <href>models/Adsız.dae</href>
+        </Link>
+    </Model>
+  </Placemark></Folder>
+</kml>

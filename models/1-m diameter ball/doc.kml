@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+
+  <Folder>
+    <name>1-m diameter boll</name>
+    <description>Created with &lt;a href="http://sketchup.google.com"&gt;Google SketchUp&lt;/a&gt;</description>
+    <visibility>1</visibility>
+    <LookAt>
+      <heading>235.3570785351</heading>
+      <tilt>63.09235386374</tilt>
+      <latitude>25.04303480791</latitude>
+      <longitude>121.5000009901</longitude>
+      <range>16.67713999684</range>
+      <altitude>7.384637791264</altitude>
+    </LookAt>
+    <Folder>
+      <name>Tour</name>
+      <Placemark>
+        <name>Scene 1</name>
+        <visibility>1</visibility>
+        <LookAt>
+          <heading>235.3570785351</heading>
+          <tilt>63.09235386374</tilt>
+          <latitude>25.04303480791</latitude>
+          <longitude>121.5000009901</longitude>
+          <range>16.67713999684</range>
+          <altitude>7.384637791264</altitude>
+        </LookAt>
+      </Placemark>
+    </Folder>
+    <Placemark>
+      <name>Model</name>
+      <description></description>
+      <Style id="default"/>
+      <Model>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <Location>
+          <latitude>25.043</latitude>
+          <longitude>121.5</longitude>
+          <altitude>0</altitude>
+        </Location>
+        <Orientation>
+          <heading>-0</heading>
+          <tilt>0</tilt>
+          <roll>0</roll>
+        </Orientation>
+        <Scale>
+          <x>1</x>
+          <y>1</y>
+          <z>1</z>
+        </Scale>
+        <Link>
+          <href>models/untitled.dae</href>
+        </Link>
+      </Model>
+    </Placemark>
+  </Folder>
+
+</kml>

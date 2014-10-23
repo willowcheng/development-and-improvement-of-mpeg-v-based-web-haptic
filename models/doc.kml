@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2' xmlns:gx='http://www.google.com/kml/ext/2.2' xmlns:kml='http://www.opengis.net/kml/2.2' xmlns:atom='http://www.w3.org/2005/Atom'>
+<Folder>
+    <name>Untitled</name>
+    <description><![CDATA[Created with <a href="http://sketchup.google.com">Google SketchUp 7.0.10248</a>]]></description>
+    <DocumentSource>SketchUp</DocumentSource>
+<visibility>1</visibility>
+<LookAt>
+<heading>341.607</heading>
+<tilt>78.7605</tilt>
+<latitude>40.01698658865216</latitude>
+<longitude>-105.2829776837659</longitude>
+<range>3.877814557909176</range>
+<altitude>0.7656617738675761</altitude>
+</LookAt>
+<Folder>
+<name>Tour</name>
+<Placemark>
+<name><![CDATA[Camera]]></name>
+<visibility>1</visibility>
+<LookAt>
+<heading>341.607</heading>
+<tilt>78.7605</tilt>
+<latitude>40.01698658865216</latitude>
+<longitude>-105.2829776837659</longitude>
+<range>3.877814557909176</range>
+<altitude>0.7656617738675761</altitude>
+</LookAt>
+</Placemark>
+</Folder>
+  <Placemark>
+    <name>Model</name>
+    <description><![CDATA[]]></description>
+    <Style id='default'>
+    </Style>
+    <Model>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <Location>
+            <longitude>-105.283000000000</longitude>
+            <latitude>40.017000000000</latitude>
+            <altitude>0.000000000000</altitude>
+        </Location>
+        <Orientation>
+            <heading>-0.000000000000</heading>
+            <tilt>0</tilt>
+            <roll>0</roll>
+        </Orientation>
+        <Scale>
+            <x>1.0</x>
+            <y>1.0</y>
+            <z>1.0</z>
+        </Scale>
+        <Link>
+            <href>models/Untitled.dae</href>
+        </Link>
+    </Model>
+  </Placemark></Folder>
+</kml>

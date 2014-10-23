@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://earth.google.com/kml/2.1'>
+<Folder>
+    <name>billiard skph</name>
+    <description><![CDATA[Created with <a href="http://sketchup.google.com/">Google SketchUp 6.0.1099</a>]]></description>
+    <DocumentSource>SketchUp</DocumentSource>
+<visibility>1</visibility>
+<LookAt>
+<heading>201.309</heading>
+<tilt>54.4668</tilt>
+<latitude>40.01716413563718</latitude>
+<longitude>-105.2827703864729</longitude>
+<range>11.84821159741599</range>
+<altitude>7.925986128810528</altitude>
+</LookAt>
+<Folder>
+<name>Tour</name>
+<Placemark>
+<name>Interface guide</name>
+<visibility>1</visibility>
+<LookAt>
+<heading>270</heading>
+<tilt>90</tilt>
+<latitude>40.01708072534029</latitude>
+<longitude>-105.2827920469879</longitude>
+<range>1.093238678999009e+016</range>
+<altitude>7.28243251701294</altitude>
+</LookAt>
+</Placemark>
+<Placemark>
+<name>Render</name>
+<visibility>1</visibility>
+<LookAt>
+<heading>201.309</heading>
+<tilt>54.4668</tilt>
+<latitude>40.01716413563718</latitude>
+<longitude>-105.2827703864729</longitude>
+<range>11.84821159741599</range>
+<altitude>7.925986128810528</altitude>
+</LookAt>
+</Placemark>
+<Placemark>
+<name>Game</name>
+<visibility>1</visibility>
+<LookAt>
+<heading>198.754</heading>
+<tilt>54.4596</tilt>
+<latitude>40.01716463540245</latitude>
+<longitude>-105.2827738081754</longitude>
+<range>11.54692583334177</range>
+<altitude>7.726281130463542</altitude>
+</LookAt>
+</Placemark>
+<Placemark>
+<name>Beginner's game</name>
+<visibility>1</visibility>
+<LookAt>
+<heading>198.754</heading>
+<tilt>54.4596</tilt>
+<latitude>40.01717076909785</latitude>
+<longitude>-105.2827180679097</longitude>
+<range>12.22080589368475</range>
+<altitude>8.177187879980332</altitude>
+</LookAt>
+</Placemark>
+</Folder>
+  <Placemark>
+    <name>Model</name>
+    <description><![CDATA[]]></description>
+    <Style id='default'>
+    </Style>
+    <Model>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <Location>
+            <longitude>-105.283000000000</longitude>
+            <latitude>40.017000000000</latitude>
+            <altitude>0.000000000000</altitude>
+        </Location>
+        <Orientation>
+            <heading>0</heading>
+            <tilt>0</tilt>
+            <roll>0</roll>
+        </Orientation>
+        <Scale>
+            <x>1.0</x>
+            <y>1.0</y>
+            <z>1.0</z>
+        </Scale>
+        <Link>
+            <href>models/billiard skph.dae</href>
+        </Link>
+    </Model>
+  </Placemark></Folder>
+</kml>
