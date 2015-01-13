@@ -1,346 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <mpegv xmlns:vwoc="http://wg11.sc29.org/mpeg-v/" xmlns:xsi="http://wg11.sc29.org/mpeg-v/" xmlns:mpegvct="http://wg11.sc29.org/mpeg-v/">
-  <glge>
-    <mesh id="xline">
-      <positions>			-1000.0,-4,0,			1000.0,-4,0			</positions>
-    </mesh>
-    <mesh id="yline">
-      <positions>			0,-1000,0,			0,1000,0			</positions>
-    </mesh>
-    <mesh id="zline">
-      <positions>			0,-4,-1000,			0,-4,1000			</positions>
-    </mesh>
-    <material id="red" specular="0" color="#f00" shadeless="1"/>
-    <material id="green" specular="0" color="#0f0" shadeless="1"/>
-    <material id="blue" specular="0" color="#00f" shadeless="1"/>
-    <material id="lines" specular="0" color="#444" shadeless="1"/>
-    <material id="box" specular="0" color="#ccc"/>
-    <scene id="mainscene" ambient_color="#fff" background_color="rgba(0,0,0,0)" fog_near="50" fog_far="60" fog_color="#555" xfog_type="FOG_LINEAR" camera="#mainCamera">
-      <light id="light" loc_x="-10" loc_y="20" loc_z="-5" rot_x="-1.3" attenuation_constant="5" type="L_POINT"/>
-      <light id="light" loc_x="-10" loc_y="20" loc_z="10" rot_x="-1.3" attenuation_constant="5" type="L_POINT"/>
-      <group id="graph">
-        <object id="xaxis" draw_type="DRAW_LINES" line_width="2" mesh="#xline" material="#red"/>
-        <object id="yaxis" draw_type="DRAW_LINES" line_width="2" mesh="#yline" material="#green"/>
-        <object id="zaxis" draw_type="DRAW_LINES" line_width="2" mesh="#zline" material="#blue"/>
-      </group>
-      <group id="cameraOffset">
-        <camera id="mainCamera" loc_z="20" loc_y="2.2" loc_x="0" rot_x="0" rot_y="0"/>
-      </group>
-      <group id="colladaGroup">
-        <physics_mesh id="physics24931" mass="5" loc_x="3" loc_y="0" loc_z="1" rot_x="0" rot_y="0" rot_z="0" friction="0.22">
-          <collada document="uploads/Untitled.dae" scaleX="3" scaleY="3" scaleZ="3"/>
-        </physics_mesh>
-        <physics_mesh mass="5" id="physics14046" loc_x="-7" loc_y="0" loc_z="1" rot_x="0" rot_y="1.66" rot_z="0" friction="0">
-          <collada document="uploads/cue rack.dae" scaleX="0.08" scaleY="0.08" scaleZ="0.08"/>
-        </physics_mesh>
-        <physics_mesh id="physics31445" mass="3" loc_x="1" loc_y="2" loc_z="2" rot_x="0" rot_y="1.51" rot_z="0" friction="0.22">
-          <collada document="uploads/Billiard Balls and Rack.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_mesh>
-        <physics_sphere radius="0.2" mass="1" id="physics27768" loc_x="-1.5" loc_y="5" loc_z="0" rot_x="0" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball1.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics30903" loc_x="-1" loc_y="5" loc_z="-1.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball2.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics25922" loc_x="0" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball3.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics14217" loc_x="1" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball4.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics1980" loc_x="1.5" loc_y="5" loc_z="-2.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball5.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics27768" loc_x="1.1" loc_y="5" loc_z="0" rot_x="0" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball1.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics30903" loc_x="0.9" loc_y="5" loc_z="-1.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball2.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics25922" loc_x="1.0" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball3.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics14217" loc_x="1" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball4.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-        <physics_sphere radius="0.2" mass="1" id="physics1980" loc_x="-0.5" loc_y="5" loc_z="-2.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0">
-          <collada document="uploads/ball5.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/>
-        </physics_sphere>
-      </group>
-      <group id="physicsGroup">
-        <physics_mesh id="floorplane" loc_x="0" loc_y="-5" loc_z="0" rot_x="0" rot_y="0" rot_z="0" friction="0">
-          <collada document="cubeplane.dae" scaleX="1" scaleY="1" scaleZ="1"/>
-        </physics_mesh>
-      </group>
-      <group id="graph">
-        <object id="xaxis" draw_type="DRAW_LINES" line_width="2" mesh="#xline" material="#red"/>
-        <object id="yaxis" draw_type="DRAW_LINES" line_width="2" mesh="#yline" material="#green"/>
-        <object id="zaxis" draw_type="DRAW_LINES" line_width="2" mesh="#zline" material="#blue"/>
-      </group>
-    </scene>
+<glge>
+		<mesh id="xline">
+			<positions>
+			-1000.0,-4,0,
+			1000.0,-4,0
+			</positions>
+		</mesh>
+		<mesh id="yline">
+			<positions>
+			0,-1000,0,
+			0,1000,0
+			</positions>
+		</mesh>
+		<mesh id="zline">
+			<positions>
+			0,-4,-1000,
+			0,-4,1000
+			</positions>
+		</mesh>
+		
+		
+		<material id="red" specular="0" color="#f00" shadeless="1"/>
+		<material id="green" specular="0" color="#0f0" shadeless="1"/>
+		<material id="blue" specular="0" color="#00f" shadeless="1"/>
+		<material id="lines" specular="0" color="#444" shadeless="1"/>
+		<material id="box" specular="0" color="#ccc"/>
+		
+		<scene id="mainscene" ambient_color="#fff" background_color="rgba(0,0,0,0)" fog_near="50" fog_far="60" fog_color="#555" xfog_type="FOG_LINEAR" camera="#mainCamera">
+	
+			<light id="light" loc_x="-10" loc_y="20" loc_z="-5" rot_x="-1.3" attenuation_constant="5" type="L_POINT"/>
+			<light id="light" loc_x="-10" loc_y="20" loc_z="10" rot_x="-1.3" attenuation_constant="5" type="L_POINT"/>
+			<group id="graph">
+				<object id="xaxis" draw_type="DRAW_LINES" line_width="2" mesh="#xline" material="#red"/>
+				<object id="yaxis" draw_type="DRAW_LINES" line_width="2" mesh="#yline" material="#green"/>
+				<object id="zaxis" draw_type="DRAW_LINES" line_width="2" mesh="#zline" material="#blue"/>
+			</group>
+	<group id="cameraOffset">
+				    <camera id="mainCamera" loc_z="20" loc_y="2.2" loc_x="0" rot_x="0" rot_y="0"/>
+			</group>
+	<group id="colladaGroup">
+	<physics_mesh id="physics24931" mass="5" loc_x="3" loc_y="0" loc_z="1" rot_x="0" rot_y="0" rot_z="0" friction="0.22"><collada document="uploads/Untitled.dae" scaleX="3" scaleY="3" scaleZ="3"/></physics_mesh>
+	<physics_mesh mass="5" id="physics14046" loc_x="-7" loc_y="0" loc_z="1" rot_x="0" rot_y="1.66" rot_z="0" friction="0"><collada document="uploads/cue rack.dae" scaleX="0.08" scaleY="0.08" scaleZ="0.08"/></physics_mesh>
+	<physics_mesh id="physics31445" mass="3" loc_x="1" loc_y="2" loc_z="2" rot_x="0" rot_y="1.51" rot_z="0" friction="0.22"><collada document="uploads/Billiard Balls and Rack.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_mesh>
+	<physics_sphere radius="0.2" mass="1" id="physics27768" loc_x="-1.5" loc_y="5" loc_z="0" rot_x="0" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball1.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics30903" loc_x="-1" loc_y="5" loc_z="-1.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball2.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics25922" loc_x="0" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball3.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics14217" loc_x="1" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball4.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics1980" loc_x="1.5" loc_y="5" loc_z="-2.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball5.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics27768" loc_x="1.1" loc_y="5" loc_z="0" rot_x="0" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball1.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics30903" loc_x="0.9" loc_y="5" loc_z="-1.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball2.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics25922" loc_x="1.0" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball3.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics14217" loc_x="1" loc_y="5" loc_z="-2" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball4.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere>
+	<physics_sphere radius="0.2" mass="1" id="physics1980" loc_x="-0.5" loc_y="5" loc_z="-2.5" rot_x="-0.21" rot_y="1.51" rot_z="0" friction="0"><collada document="uploads/ball5.dae" scaleX="0.2" scaleY="0.2" scaleZ="0.2"/></physics_sphere></group>
+	<group id="physicsGroup">
+					<physics_mesh id="floorplane" loc_x="0" loc_y="-5" loc_z="0" rot_x="0" rot_y="0" rot_z="0" friction="0">
+			<collada document="cubeplane.dae" scaleX="1" scaleY="1" scaleZ="1"/>
+			</physics_mesh>
+	</group>
+				<group id="graph">
+				<object id="xaxis" draw_type="DRAW_LINES" line_width="2" mesh="#xline" material="#red"/>
+				<object id="yaxis" draw_type="DRAW_LINES" line_width="2" mesh="#yline" material="#green"/>
+				<object id="zaxis" draw_type="DRAW_LINES" line_width="2" mesh="#zline" material="#blue"/>
+			</group>
+  </scene>
     <animation_vector id="flow" frames="1000">
-      <animation_curve channel="OffsetY">
-        <linear_point x="0.0" y="-1"/>
-        <linear_point x="1000.0" y="1.0"/>
-      </animation_curve>
-    </animation_vector>
-    <animation_vector id="bob" frames="120">
-      <animation_curve channel="DRotX">
-        <linear_point x="1" y="0"/>
-        <linear_point x="30" y=".4"/>
-        <linear_point x="60" y="0"/>
-        <linear_point x="90" y=".4"/>
-        <linear_point x="120" y="0"/>
-      </animation_curve>
-      <animation_curve channel="LocZ">
-        <linear_point x="1" y="-.3"/>
-        <linear_point x="30" y="0"/>
-        <linear_point x="60" y="-.3"/>
-        <linear_point x="90" y="0"/>
-        <linear_point x="120" y="-.3"/>
-      </animation_curve>
-    </animation_vector>
-    <animation_vector id="disappear" frames="10">
-      <animation_curve channel="Scale">
-        <linear_point x="0" y="0.01"/>
-        <linear_point x="3" y="0.013"/>
-        <linear_point x="10" y="0"/>
-      </animation_curve>
-    </animation_vector>
-  </glge>
-  <sceneType>physics</sceneType>
-  <vwoc:VirtualObjectList>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject001">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_20832">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>3</mpegvct:X>
-                <mpegvct:Y>0</mpegvct:Y>
-                <mpegvct:Z>1</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>3</mpegvct:X>
-                <mpegvct:Y>3</mpegvct:Y>
-                <mpegvct:Z>3</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/Untitled.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_5657"/>
-      <vwoc:MaterialProperty stiffness="0.34" staticFriction="0.35" dynamicFriction="0.22" damping="0.39" texture=" " mass="5"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject002">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_12479">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>-7</mpegvct:X>
-                <mpegvct:Y>0</mpegvct:Y>
-                <mpegvct:Z>1</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.08</mpegvct:X>
-                <mpegvct:Y>0.08</mpegvct:Y>
-                <mpegvct:Z>0.08</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/cue rack.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_9100"/>
-      <vwoc:MaterialProperty stiffness="0" staticFriction="0" dynamicFriction="0" damping="0" texture=" " mass="5"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject003">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_25322">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>1</mpegvct:X>
-                <mpegvct:Y>2</mpegvct:Y>
-                <mpegvct:Z>2</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.2</mpegvct:X>
-                <mpegvct:Y>0.2</mpegvct:Y>
-                <mpegvct:Z>0.2</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/Billiard Balls and Rack.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_6619"/>
-      <vwoc:MaterialProperty stiffness="0.34" staticFriction="0.35" dynamicFriction="0.22" damping="0.39" texture=" " mass="3"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject004">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_28497">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>-2</mpegvct:X>
-                <mpegvct:Y>3</mpegvct:Y>
-                <mpegvct:Z>0</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.2</mpegvct:X>
-                <mpegvct:Y>0.2</mpegvct:Y>
-                <mpegvct:Z>0.2</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/ball1.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_17334"/>
-      <vwoc:MaterialProperty stiffness="0.34" staticFriction="0.35" dynamicFriction="0.22" damping="0.39" texture=" " mass="3"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject005">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_22564">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>-1</mpegvct:X>
-                <mpegvct:Y>3</mpegvct:Y>
-                <mpegvct:Z>-3</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.2</mpegvct:X>
-                <mpegvct:Y>0.2</mpegvct:Y>
-                <mpegvct:Z>0.2</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/ball2.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_12173"/>
-      <vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject006">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_26963">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>1</mpegvct:X>
-                <mpegvct:Y>3</mpegvct:Y>
-                <mpegvct:Z>-2</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.2</mpegvct:X>
-                <mpegvct:Y>0.2</mpegvct:Y>
-                <mpegvct:Z>0.2</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/ball3.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_21136"/>
-      <vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject007">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_5006">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>1</mpegvct:X>
-                <mpegvct:Y>3</mpegvct:Y>
-                <mpegvct:Z>-4</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.2</mpegvct:X>
-                <mpegvct:Y>0.2</mpegvct:Y>
-                <mpegvct:Z>0.2</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/ball4.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_18351"/>
-      <vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/>
-    </vwoc:VirtualObject>
-    <vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject008">
-      <vwoc:VWOC>
-        <vwoc:ControlList>
-          <vwoc:Control controlID="CTRLID_17221">
-            <vwoc:MotionFeatureControl>
-              <vwoc:Position>
-                <mpegvct:X>0</mpegvct:X>
-                <mpegvct:Y>3</mpegvct:Y>
-                <mpegvct:Z>-2.5</mpegvct:Z>
-              </vwoc:Position>
-              <vwoc:ScaleFactor>
-                <mpegvct:X>0.2</mpegvct:X>
-                <mpegvct:Y>0.2</mpegvct:Y>
-                <mpegvct:Z>0.2</mpegvct:Z>
-              </vwoc:ScaleFactor>
-            </vwoc:MotionFeatureControl>
-          </vwoc:Control>
-        </vwoc:ControlList>
-      </vwoc:VWOC>
-      <vwoc:Appearance>uploads/ball5.dae</vwoc:Appearance>
-      <vwoc:Animation>
-        <vwoc:Motion>
-          <vwoc:Name>none</vwoc:Name>
-          <vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri>
-        </vwoc:Motion>
-      </vwoc:Animation>
-      <vwoc:HapticProperty hapticID="MID_23194"/>
-      <vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/>
-    </vwoc:VirtualObject>
-  </vwoc:VirtualObjectList>
+    <animation_curve channel="OffsetY">
+      <linear_point x="0.0" y="-1"/>
+      <linear_point x="1000.0" y="1.0"/>
+    </animation_curve>
+  </animation_vector>
+
+  <animation_vector id="bob" frames="120">
+    <animation_curve channel="DRotX">
+      <linear_point x="1" y="0"/>
+      <linear_point x="30" y=".4"/>
+      <linear_point x="60" y="0"/>
+      <linear_point x="90" y=".4"/>
+      <linear_point x="120" y="0"/>
+    </animation_curve>
+    <animation_curve channel="LocZ">
+      <linear_point x="1" y="-.3"/>
+      <linear_point x="30" y="0"/>
+      <linear_point x="60" y="-.3"/>
+      <linear_point x="90" y="0"/>
+      <linear_point x="120" y="-.3"/>
+    </animation_curve>
+  </animation_vector>
+  <animation_vector id="disappear" frames="10">
+    <animation_curve channel="Scale">
+      <linear_point x="0" y="0.01"/>
+      <linear_point x="3" y="0.013"/>
+      <linear_point x="10" y="0"/>
+    </animation_curve>
+  </animation_vector>
+</glge>
+<sceneType>physics</sceneType>
+<vwoc:VirtualObjectList>
+<vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject001"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_20832"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>3</mpegvct:X><mpegvct:Y>0</mpegvct:Y><mpegvct:Z>1</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>3</mpegvct:X><mpegvct:Y>3</mpegvct:Y><mpegvct:Z>3</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/Untitled.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_5657"/><vwoc:MaterialProperty stiffness="0.34" staticFriction="0.35" dynamicFriction="0.22" damping="0.39" texture=" " mass="5"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject002"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_12479"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>-7</mpegvct:X><mpegvct:Y>0</mpegvct:Y><mpegvct:Z>1</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.08</mpegvct:X><mpegvct:Y>0.08</mpegvct:Y><mpegvct:Z>0.08</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/cue rack.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_9100"/><vwoc:MaterialProperty stiffness="0" staticFriction="0" dynamicFriction="0" damping="0" texture=" " mass="5"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject003"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_25322"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>1</mpegvct:X><mpegvct:Y>2</mpegvct:Y><mpegvct:Z>2</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.2</mpegvct:X><mpegvct:Y>0.2</mpegvct:Y><mpegvct:Z>0.2</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/Billiard Balls and Rack.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_6619"/><vwoc:MaterialProperty stiffness="0.34" staticFriction="0.35" dynamicFriction="0.22" damping="0.39" texture=" " mass="3"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject004"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_28497"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>-2</mpegvct:X><mpegvct:Y>3</mpegvct:Y><mpegvct:Z>0</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.2</mpegvct:X><mpegvct:Y>0.2</mpegvct:Y><mpegvct:Z>0.2</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/ball1.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_17334"/><vwoc:MaterialProperty stiffness="0.34" staticFriction="0.35" dynamicFriction="0.22" damping="0.39" texture=" " mass="3"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject005"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_22564"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>-1</mpegvct:X><mpegvct:Y>3</mpegvct:Y><mpegvct:Z>-3</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.2</mpegvct:X><mpegvct:Y>0.2</mpegvct:Y><mpegvct:Z>0.2</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/ball2.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_12173"/><vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject006"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_26963"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>1</mpegvct:X><mpegvct:Y>3</mpegvct:Y><mpegvct:Z>-2</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.2</mpegvct:X><mpegvct:Y>0.2</mpegvct:Y><mpegvct:Z>0.2</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/ball3.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_21136"/><vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject007"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_5006"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>1</mpegvct:X><mpegvct:Y>3</mpegvct:Y><mpegvct:Z>-4</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.2</mpegvct:X><mpegvct:Y>0.2</mpegvct:Y><mpegvct:Z>0.2</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/ball4.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_18351"/><vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/></vwoc:VirtualObject><vwoc:VirtualObject xsi:type="vwoc:VirtualObjectType" id="virtualObject008"><vwoc:VWOC><vwoc:ControlList><vwoc:Control controlID="CTRLID_17221"><vwoc:MotionFeatureControl><vwoc:Position><mpegvct:X>0</mpegvct:X><mpegvct:Y>3</mpegvct:Y><mpegvct:Z>-2.5</mpegvct:Z></vwoc:Position><vwoc:ScaleFactor><mpegvct:X>0.2</mpegvct:X><mpegvct:Y>0.2</mpegvct:Y><mpegvct:Z>0.2</mpegvct:Z></vwoc:ScaleFactor></vwoc:MotionFeatureControl></vwoc:Control></vwoc:ControlList></vwoc:VWOC><vwoc:Appearance>uploads/ball5.dae</vwoc:Appearance><vwoc:Animation><vwoc:Motion><vwoc:Name>none</vwoc:Name><vwoc:Uri>http://voAnimationdb.com/turn_360.bvh</vwoc:Uri></vwoc:Motion></vwoc:Animation><vwoc:HapticProperty hapticID="MID_23194"/><vwoc:MaterialProperty stiffness="0.35" staticFriction="0.35" dynamicFriction="0.22" damping="0.45" texture=" " mass="3"/></vwoc:VirtualObject></vwoc:VirtualObjectList>
 </mpegv>
