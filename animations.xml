@@ -1,31 +1,30 @@
-  <animation_vector id="flow" frames="1000">
-    <animation_curve channel="OffsetY">
-      <linear_point x="0.0" y="-1" />
-      <linear_point x="1000.0" y="1.0" />
-    </animation_curve>
-  </animation_vector>
-
-  <animation_vector id="bob" frames="120">
-    <animation_curve channel="DRotX">
-      <linear_point x="1" y="0" />
-      <linear_point x="30" y=".4" />
-      <linear_point x="60" y="0" />
-      <linear_point x="90" y=".4" />
-      <linear_point x="120" y="0" />
-    </animation_curve>
-    <animation_curve channel="LocZ">
-      <linear_point x="1" y="-.3" />
-      <linear_point x="30" y="0" />
-      <linear_point x="60" y="-.3" />
-      <linear_point x="90" y="0" />
-      <linear_point x="120" y="-.3" />
-    </animation_curve>
-  </animation_vector>
-
-  <animation_vector id="disappear" frames="10">
-    <animation_curve channel="Scale">
-      <linear_point x="0" y="0.01" />
-      <linear_point x="3" y="0.013" />
-      <linear_point x="10" y="0" />
-    </animation_curve>
-  </animation_vector>
+<?xml version="1.0" encoding="UTF-8"?>
+<animation_vector id="flow" frames="1000">
+  <animation_curve channel="OffsetY">
+    <linear_point x="0.0" y="-1" />
+    <linear_point x="1000.0" y="1.0" />
+  </animation_curve>
+</animation_vector>
+<animation_vector id="bob" frames="120">
+  <animation_curve channel="DRotX">
+    <linear_point x="1" y="0" />
+    <linear_point x="30" y=".4" />
+    <linear_point x="60" y="0" />
+    <linear_point x="90" y=".4" />
+    <linear_point x="120" y="0" />
+  </animation_curve>
+  <animation_curve channel="LocZ">
+    <linear_point x="1" y="-.3" />
+    <linear_point x="30" y="0" />
+    <linear_point x="60" y="-.3" />
+    <linear_point x="90" y="0" />
+    <linear_point x="120" y="-.3" />
+  </animation_curve>
+</animation_vector>
+<animation_vector id="disappear" frames="10">
+  <animation_curve channel="Scale">
+    <linear_point x="0" y="0.01" />
+    <linear_point x="3" y="0.013" />
+    <linear_point x="10" y="0" />
+  </animation_curve>
+</animation_vector>
