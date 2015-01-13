@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <animation_vector id="flow" frames="1000">
   <animation_curve channel="OffsetY">
     <linear_point x="0.0" y="-1" />

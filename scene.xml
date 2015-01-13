@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <mpegv xmlns:vwoc="http://wg11.sc29.org/mpeg-v/" xmlns:xsi="http://wg11.sc29.org/mpeg-v/" xmlns:mpegvct="http://wg11.sc29.org/mpeg-v/">
   <glge>
     <scene id="mainscene" ambient_color="#333" background_color="#888" fog_near="50" fog_far="60" fog_color="#555" fog_type="FOG_LINEAR" camera="#mainCamera">
