@@ -4,11 +4,34 @@
   <title>
     Web MPEGV Haptic Authoring Tool
   </title>
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+  <!-- Le styles -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+  <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+  <![endif]-->
+  <link href="assets/css/docs.css" rel="stylesheet">
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+
   <script src="js/glge-compiled-min.js"></script>
+
   <script id="glge_document" type="text/xml">
     <glge>
       <mesh id="groundMesh">
@@ -106,19 +129,47 @@
 </head>
 
 <body>
+
+  <!-- Navbar
+  ================================================== -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="./index.html">WEB MPEG-V HAPTIC</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active">
+              <a href="">Authoring Tool</a>
+            </li>
+            <li>
+              <a href="./player.html">Haptic Player</a>
+            </li>
+            <li>
+              <a href="https://github.com/willowcheng/development-and-improvement-of-mpeg-v-based-web-haptic/issues">Feedback/Issues</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Willow_Cheng">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <table id="toptable">
-    <tr>
-      <td>
-        <h1 align="center">WEB MPEG-V HAPTIC AUTHORING TOOL</h1>
-      </td>
-    </tr>
+
     <tr>
       <td>
         <div id="main">
           <h4>STEP 1 : UPLOAD YOUR IMAGES</h4>
           <form method="post" enctype="multipart/form-data" action="upload.php">
             <input type="file" name="images" id="images" multiple />
-           <button type="submit" id="btn">UPLOAD FILES!</button>
+           <button type="submit" id="btn">UPLOAD FILES</button>
           </form>
           <div id="response"></div>
           <ul id="image-list">
@@ -127,7 +178,7 @@
       </td>
       <td>
         <div id="container">
-          <span id="dragText">OR DRAG AND DROP IMAGES HERE TO UPLOA</span>
+          <span id="dragText">OR DRAG AND DROP IMAGES HERE TO UPLOAD</span>
           <ul id="fileList"></ul>
         </div>
       </td>
@@ -135,10 +186,10 @@
     <tr>
       <td>
         <div id="xmlContainer">
-          <h4>Step 2 : Upload Your 3D Model</h4>
+          <h4>STEP 2 : UPLOAD YOUR 3D MODEL</h4>
           <form method="post" enctype="multipart/form-data" action="upload_file.php">
             <input type="file" name="xml" id="xml" multiple />
-            <button type="submit" id="btnXml">Upload collada model!</button>
+            <button type="submit" id="btnXml">UPLOAD COLLADA MODEL</button>
           </form>
           <div id="xmlResponse"></div>
           <ul id="model-list">
@@ -147,16 +198,16 @@
       </td>
       <td>
         <div>
-          <h4>Step 3: Click to add It!</h4>
-          <button onclick="addModel()">Add</button>
-          <button onclick="addAnother()">Add Another Model</button>
-          <button onclick="reset()">Reset</button>
+          <h4>STEP 3 : CLICK TO ADD IT</h4>
+          <button onclick="addModel()">ADD</button>
+          <button onclick="addAnother()">ADD ANOTHER MODEL</button>
+          <button onclick="reset()">RESET</button>
         </div>
       </td>
       <td>
-        <h4>Step 4: Set develop mode</h4>
-        <button onClick="normal()">Normal</button>
-        <button>Physics-enabled</button>
+        <h4>STEP 4 : SET DEVELOP MODER</h4>
+        <button onClick="normal()">NORMAL</button>
+        <button>PHYSICS-ENABLED</button>
       </td>
     </tr>
   </table>
@@ -167,12 +218,12 @@
       </td>
       <td>
 
-        <h3>Step 5:Modify them here!</h3>
+        <h3>STEP 5 : MODIFY PROPERTIES HERE</h3>
         <table>
           <tr>
             <td>
               <p class="ui-state-default ui-corner-all">
-                Graphic properties
+                GRAPHIC PROPERTIES
               </p>
             </td>
           </tr>
@@ -358,8 +409,15 @@
         </tr>
   </table>
 
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+  <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+  <script src="assets/js/docs.js" type="text/javascript"></script>
+  <script src="assets/js/demo.js" type="text/javascript"></script>
 
   <script type="text/javascript" src="js/index.js"></script>
-</body>
 
+  </body>
 </html>

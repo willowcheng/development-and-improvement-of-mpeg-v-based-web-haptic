@@ -843,7 +843,7 @@ inputXml.addEventListener("change", function(event) {
   }
 
   input.addEventListener("change", function(evt) {
-    document.getElementById("response").innerHTML = "Uploading . . ."
+    document.getElementById("response").innerHTML = "UPLOADING"
     var i = 0,
       len = this.files.length,
       img, xml, reader, file;
