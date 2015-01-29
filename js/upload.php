@@ -8,4 +8,4 @@ foreach ($_FILES["images"]["error"] as $key => $error) {
 }
 
 
-echo "<h2>Successfully Uploaded Images</h2>";
+echo "<h2>SUCCESSFULLY UPLOADED IMAGES</h2>";
