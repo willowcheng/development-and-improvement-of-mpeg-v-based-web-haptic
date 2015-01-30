@@ -163,7 +163,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="./index.html">MPEG-V HAPTIC</a>
+        <a class="brand" href="./index.html">WEB MPEG-V HAPTIC</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active">
@@ -219,7 +219,6 @@
           <div class="page-header">
             <h2>STEP 1 : UPLOAD YOUR IMAGES</h2>
           </div>
-          <div class="container">
             <form method="post" enctype="multipart/form-data" action="upload.php">
               <input type="file" name="images" id="images" multiple />
               <button type="submit" id="btn">UPLOAD FILES</button>
@@ -227,11 +226,6 @@
             <div id="response"></div>
             <ul id="image-list">
             </ul>
-          </div>
-          <div id="container">
-            <span id="dragText">OR DRAG AND DROP IMAGES HERE TO UPLOAD</span>
-            <ul id="fileList"></ul>
-          </div>
         </section>
         <!-- end upload images -->
 
@@ -241,7 +235,6 @@
           <div class="page-header" id="xmlContainer">
             <h2>STEP 2 : UPLOAD YOUR 3D MODEL</h2>
           </div>
-          <div class="container">
             <form method="post" enctype="multipart/form-data" action="upload_file.php">
               <input type="file" name="xml" id="xml" multiple />
               <button type="submit" id="btnXml">UPLOAD COLLADA MODEL</button>
@@ -249,7 +242,7 @@
             <div id="xmlResponse"></div>
             <ul id="model-list">
             </ul>
-          </div>
+
         </section>
         <!-- end upload models -->
 
@@ -258,11 +251,10 @@
           <div class="page-header">
             <h2>STEP 3 : CLICK TO ADD</h2>
           </div>
-          <div class="container">
             <button onclick="addModel()">ADD</button>
             <button onclick="addAnother()">ADD ANOTHER MODEL</button>
             <button onclick="reset()">RESET</button>
-          </div>
+
         </section>
         <!-- end add others -->
 
@@ -271,9 +263,8 @@
           <div class="page-header">
             <h2>STEP 4 : PREVIEW SCENE</h2>
           </div>
-          <div class="container">
             <canvas id="canvas" width="800px" height="500px" style="cursor: default;"></canvas>
-          </div>
+
         </section>
         <!-- end view scene -->
 
@@ -282,7 +273,6 @@
           <div class="page-header">
             <h2>STEP 5 : MODIFY PROPERTIES HERE</h2>
           </div>
-          <div class="container">
             <div class="ui-widget">
             <div class="ui-state-default ui-corner-all">
               <p>GRAPHIC PROPERTIES</p>
@@ -441,7 +431,7 @@
                 </td>
               </tr>
             </table>
-          </div>
+
         </section>
         <!-- end modify properties -->
 
@@ -452,15 +442,15 @@
           <div class="page-header">
             <h2>STEP 6 : EXPORT APPLICATION</h2>
           </div>
-          <div class="container">
             <button onClick="exportHaml()">Export</button>
             <ul id="hamlResponse"></ul>
-          </div>
+
         </section>
         <!-- end export application -->
 
       </div>
     </div>
+  </div>
 
 
         <!-- Footer
@@ -476,7 +466,7 @@
             <ul class="footer-links">
               <li><a href="http://willowcheng.postach.io/">Blog</a></li>
               <li class="muted">&middot;</li>
-              <li><a href="https://github.com/willowcheng/development-and-improvement-of-mpeg-v-based-web-haptic/issues">Issues</a></li>
+              <li><a href="https://github.com/willowcheng/development-and-improvement-of-mpeg-v-based-web-haptic/issues?state=open">Issues</a></li>
             </ul>
           </div>
         </footer>

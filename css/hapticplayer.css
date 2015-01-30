@@ -1,9 +1,0 @@
-input[type="text"] {
-  width: 30px;
-  box-sizing: content-box;
-}
-#sliders {
-  position: relative;
-  top: 10%;
-  left: 10%;
-}

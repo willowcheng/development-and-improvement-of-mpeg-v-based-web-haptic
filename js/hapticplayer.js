@@ -108,7 +108,7 @@ function loaded(evt) {
   fileString = evt.target.result;
 }
 $(function() {
-  $("#tabs").tabs();
+  $('#tabs').tabs();
   $("input,button").button();
   $("#HAMLImporter").change(function(event) {
     var file = this.files[0];

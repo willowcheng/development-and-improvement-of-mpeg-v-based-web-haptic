@@ -15,44 +15,33 @@
   <script id="HAML_document" type="text/xml"></script>
 
 
-  <script src="js/hapticplayer.js"></script>
 
   <!-- Le styles -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/custom-theme/jquery-ui-1.10.3.custom.css">
-  <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.theme.css">-->
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+  <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
   <!--[if IE 7]>
   <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
   <![endif]-->
   <!--[if lt IE 9]>
-  <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.3.ie.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/custom-theme/jquery.ui.1.10.0.ie.css"/>
   <![endif]-->
-  <link rel="stylesheet" href="assets/css/docs.css">
-  <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
-  <!--begin wijmo menu-->
-  <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
-  <!--End wijmo menu-->
-  <!--begin file input-->
-  <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
-  <!--End file input-->
+  <link href="assets/css/docs.css" rel="stylesheet">
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
-  <!-- jqGrid-->
-  <link rel="stylesheet" href="third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
-  <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css">
-  <!-- end jqGrid -->
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-  <script src="assets/js/vendor/html5shiv.js" type="text/javascript"></script>
-  <script src="assets/js/vendor/respond.min.js" type="text/javascript"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
   <!-- Le fav and touch icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  <link href="css/player.css" rel="stylesheet">
 
 
 </head>
@@ -121,13 +110,11 @@
           <div class="page-header">
             <h2> STEP 1 : IMPORT MPEG-V FILE</h2>
           </div>
-          <div class="container">
             </br>
             <input align="center" type="file" name="HAMLImporter" id="HAMLImporter" />
             <Button onClick="view()">View Haptic Scene</Button>
             <input type="button" value="Reset" onClick="document.location.reload(true)">
             </br>
-          </div>
         </section>
         <!-- end import files -->
 
@@ -136,24 +123,24 @@
           <div class="page-header">
             <h2>STEP 2 : ADJUST PROXY PROPERTIES</h2>
           </div>
-          <div class="container">
-            <div id="sliders">
+          <div class="window-contain">
+              <div class="slides">
+                <label for="pMass">mass:</label>
+                <input type="text" id="pMass" />
+                <div id="massSlider" class="mySliders"></div>
+              </div>
+              <div class="slides">
+                <label for="pFriction">friction:</label>
+                <input type="text" id="pFriction" />
+                <div id="fricSlider" class="mySliders"></div>
+              </div>
 
-              <label for="pMass">mass:</label>
-              <input type="text" id="pMass" style="border: 0; color: #f6931f; font-weight: bold;" />
-              <div id="massSlider" class="mySliders"></div>
-
-
-              <label for="pFriction">friction:</label>
-              <input type="text" id="pFriction" style="border: 0; color: #f6931f; font-weight: bold;" />
-              <div id="fricSlider" class="mySliders"></div>
-
-              <label for="pRadius">radius:</label>
-              <input type="text" id="pRadius" style="border: 0; color: #f6931f; font-weight: bold;" />
-              <div id="radiusSlider" class="mySliders"></div>
-
+              <div class="slides">
+                <label for="pRadius">radius:</label>
+                <input type="text" id="pRadius" />
+                <div id="radiusSlider" class="mySliders"></div>
+              </div>
             </div>
-          </div>
         </section>
         <!-- end proxy properties -->
 
@@ -163,9 +150,7 @@
           <div class="page-header">
             <h2>STEP 3 : VIEW YOUR APPLICATION</h2>
           </div>
-          <div class="container">
-            <canvas id="canvas" width="800" height="600"></canvas>
-          </div>
+            <canvas id="canvas" width="800px" height="500px"></canvas>
         </section>
         <!-- end view application -->
 
@@ -175,69 +160,64 @@
           <div class="page-header">
             <h2>STEP 4 : ADD YOUR CODE</h2>
           </div>
-          <div class="container">
-            <div id="tabs">
-              <ul>
-                <li><a href="#tabs-1">Graphc rendering</a>
-                </li>
-                <li><a href="#tabs-2">Haptic rendering</a>
-                </li>
-                <li><a href="#tabs-3">Other code</a>
-                </li>
-              </ul>
-              <div id="tabs-1">
-                <p>Add you code here:</p>
-                <textarea rows="20" cols="40">
-                </textarea>
-              </div>
-              <div id="tabs-2">
-                <p>Add your code here:</p>
-                <textarea rows="20" cols="40">
-                </textarea>
-              </div>
-              <div id="tabs-3">
-                <p>Add your code here:</p>
-                <textarea rows="20" cols="40">
-                </textarea>
-              </div>
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-a">Graphc rendering</a>
+              </li>
+              <li><a href="#tabs-b">Haptic rendering</a>
+              </li>
+              <li><a href="#tabs-c">Other code</a>
+              </li>
+            </ul>
+            <div id="tabs-a">
+              <textarea name="textarea" rows="10" cols="40">
+              </textarea>
             </div>
-            <p align="center">
-              <button>Generate</button>
+            <div id="tabs-b">
+              <textarea name="textarea" rows="10" cols="40">
+              </textarea>
+            </div>
+            <div id="tabs-c">
+              <textarea name="textarea" rows="10" cols="40">
+              </textarea>
+            </div>
           </div>
+          <p align="center">
+            <button>Generate</button>
         </section>
         <!-- end add code -->
       </div>
     </div>
+  </div>
 
-    <!-- Footer
+  <!-- Footer
         ================================================== -->
-    <footer class="footer">
-      <div class="container">
-        <p>
-          Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao & Liu Cheng 2012 - 2015
-        </p>
-        <p>
-          jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
-        </p>
-        <ul class="footer-links">
-          <li><a href="http://willowcheng.postach.io/">Blog</a>
-          </li>
-          <li class="muted">&middot;</li>
-          <li><a href="https://github.com/willowcheng/development-and-improvement-of-mpeg-v-based-web-haptic/issues">Issues</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+  <footer class="footer">
+    <div class="contain">
+      <p>
+        Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao & Liu Cheng 2012 - 2015
+      </p>
+      <p>
+        jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
+      </p>
+      <ul class="footer-links">
+        <li><a href="http://willowcheng.postach.io/">Blog</a>
+        </li>
+        <li class="muted">&middot;</li>
+        <li><a href="https://github.com/willowcheng/development-and-improvement-of-mpeg-v-based-web-haptic/issues?state=open">Issues</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
-    <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-    <script src="assets/js/docs.js" type="text/javascript"></script>
-    <script src="assets/js/demo.js" type="text/javascript"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+  <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+  <script src="assets/js/docs.js" type="text/javascript"></script>
+
+  <script src="js/hapticplayer.js" type="text/javascript"></script>
 </body>
-
-
 
 </html>
