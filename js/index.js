@@ -30,7 +30,10 @@ function modelProp(locx, locy, locz, rotx, roty, rotz, scaleX, scaleY, scaleZ, a
   this.dfriction = dfriction;
   this.props = props;
 }
+
+
 $(function() {
+
   //$( "#accordion" ).accordion();
   $("#physicselectable").selectable();
   $("#locxSlider").slider({
