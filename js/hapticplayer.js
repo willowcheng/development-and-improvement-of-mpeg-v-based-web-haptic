@@ -123,8 +123,9 @@ $(function() {
 
 
 
-// set for sliders
+// Set for sliders
 $(function() {
+  // Mass vertical slider
   $("#massSlider").slider({
     min: 0,
     max: 5,
@@ -139,6 +140,8 @@ $(function() {
     }
   });
   $("#pMass").val($("#massSlider").slider("value"));
+
+  // Frication vertical slide
   $("#fricSlider").slider({
     min: 0,
     max: 100,
@@ -153,6 +156,8 @@ $(function() {
     }
   });
   $("#pFriction").val($("#fricSlider").slider("value") / 100);
+
+  // Radius vertical slide
   $("#radiusSlider").slider({
     min: 0,
     max: 30,
@@ -168,7 +173,6 @@ $(function() {
     }
   });
   $("#pRadius").val($("#radiusSlider").slider("value") / 10);
-  //
 });
 
 function view() {

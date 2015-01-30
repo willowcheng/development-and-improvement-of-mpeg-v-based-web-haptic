@@ -138,29 +138,20 @@
           </div>
           <div class="container">
             <div id="sliders">
-              <table id="newtable">
-                <tr>
-                  <td>
-                    <label for="pMass">mass:</label>
-                    <input type="text" id="pMass" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="massSlider" class="mySliders"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label for="pFriction">friction:</label>
-                    <input type="text" id="pFriction" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="fricSlider" class="mySliders"></div>
-                  </td>
-                  <tr>
-                    <td>
-                      <label for="pRadius">radius:</label>
-                      <input type="text" id="pRadius" style="border: 0; color: #f6931f; font-weight: bold;" />
-                      <div id="radiusSlider" class="mySliders"></div>
-                    </td>
-                  </tr>
-                </tr>
-              </table>
+
+              <label for="pMass">mass:</label>
+              <input type="text" id="pMass" style="border: 0; color: #f6931f; font-weight: bold;" />
+              <div id="massSlider" class="mySliders"></div>
+
+
+              <label for="pFriction">friction:</label>
+              <input type="text" id="pFriction" style="border: 0; color: #f6931f; font-weight: bold;" />
+              <div id="fricSlider" class="mySliders"></div>
+
+              <label for="pRadius">radius:</label>
+              <input type="text" id="pRadius" style="border: 0; color: #f6931f; font-weight: bold;" />
+              <div id="radiusSlider" class="mySliders"></div>
+
             </div>
           </div>
         </section>
@@ -170,9 +161,9 @@
         <!-- View application ============================================= -->
         <section id="view-application">
           <div class="page-header">
-            <div class="container">
-              <h2>STEP 3 : VIEW YOUR APPLICATION</h2>
-            </div>
+            <h2>STEP 3 : VIEW YOUR APPLICATION</h2>
+          </div>
+          <div class="container">
             <canvas id="canvas" width="800" height="600"></canvas>
           </div>
         </section>
@@ -182,9 +173,9 @@
         <!-- Add code ======================================================= -->
         <section id="add-code">
           <div class="page-header">
-            <div class="container">
-              <h2>STEP 4 : ADD YOUR CODE</h2>
-            </div>
+            <h2>STEP 4 : ADD YOUR CODE</h2>
+          </div>
+          <div class="container">
             <div id="tabs">
               <ul>
                 <li><a href="#tabs-1">Graphc rendering</a>
@@ -215,14 +206,36 @@
           </div>
         </section>
         <!-- end add code -->
+      </div>
+    </div>
 
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
-        <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-        <script src="assets/js/docs.js" type="text/javascript"></script>
-        <script src="assets/js/demo.js" type="text/javascript"></script>
+    <!-- Footer
+        ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao & Liu Cheng 2012 - 2015
+        </p>
+        <p>
+          jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
+        </p>
+        <ul class="footer-links">
+          <li><a href="http://willowcheng.postach.io/">Blog</a>
+          </li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/willowcheng/development-and-improvement-of-mpeg-v-based-web-haptic/issues">Issues</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+    <script src="assets/js/docs.js" type="text/javascript"></script>
+    <script src="assets/js/demo.js" type="text/javascript"></script>
 </body>
 
 
