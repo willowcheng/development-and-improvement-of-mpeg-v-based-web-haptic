@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Web MPEGV Haptic Authoring Tool</title>
@@ -187,8 +188,8 @@
   =============================================== -->
   <header class="bs-header" id="overview">
     <div class="container">
-      <h1>Web MPEG-V Haptic Authoring Tool and Player</h1>
-      <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v1.0 alpha).</p>
+      <h1>Web MPEG-V Haptic Authoring Tool</h1>
+      <p class="lead">Please follow the instruction to export your application.</p>
     </div>
   </header>
 
@@ -197,45 +198,50 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#upload-image"><i class="icon-chevron-right"></i> Upload Images</a></li>
-          <li><a href="#upload-model"><i class="icon-chevron-right"></i> Upload 3D Models</a></li>
-          <li><a href="#add-others"><i class="icon-chevron-right"></i> Add Models</a></li>
-          <li><a href="#modify-properties"><i class="icon-chevron-right"></i> Modify Properties</a></li>
-          <li><a href="#export-application"><i class="icon-chevron-right"></i> Export Application</a></li>
+          <li><a href="#upload-image"><i class="icon-chevron-right"></i> Upload Images</a>
+          </li>
+          <li><a href="#upload-model"><i class="icon-chevron-right"></i> Upload 3D Models</a>
+          </li>
+          <li><a href="#add-others"><i class="icon-chevron-right"></i> Add Models</a>
+          </li>
+          <li><a href="#preview-scene"><i class="icon-chevron-right"></i> Preview Scene</a>
+          </li>
+          <li><a href="#modify-properties"><i class="icon-chevron-right"></i> Modify Properties</a>
+          </li>
+          <li><a href="#export-application"><i class="icon-chevron-right"></i> Export Application</a>
+          </li>
         </ul>
       </div>
 
       <div class="span9">
         <!-- Upload images ================================================== -->
-          <section id="upload-image">
-            <div class="page-header">
-              <h1>STEP 1 : UPLOAD YOUR IMAGES</h1>
-            </div>
-            <div class="container">
-              <form method="post" enctype="multipart/form-data" action="upload.php">
-                <input type="file" name="images" id="images" multiple />
-                <button type="submit" id="btn">UPLOAD FILES</button>
-              </form>
-              <div id="response"></div>
-              <ul id="image-list">
-              </ul>
-            </div>
-
-            <div id="container">
-              <span id="dragText">OR DRAG AND DROP IMAGES HERE TO UPLOAD</span>
-              <ul id="fileList"></ul>
-            </div>
-          </section>
-
-          <!-- end upload images -->
-
+        <section id="upload-image">
+          <div class="page-header">
+            <h2>STEP 1 : UPLOAD YOUR IMAGES</h2>
+          </div>
+          <div class="container">
+            <form method="post" enctype="multipart/form-data" action="upload.php">
+              <input type="file" name="images" id="images" multiple />
+              <button type="submit" id="btn">UPLOAD FILES</button>
+            </form>
+            <div id="response"></div>
+            <ul id="image-list">
+            </ul>
+          </div>
+          <div id="container">
+            <span id="dragText">OR DRAG AND DROP IMAGES HERE TO UPLOAD</span>
+            <ul id="fileList"></ul>
+          </div>
         </section>
+        <!-- end upload images -->
+
+
         <!-- Upload models ========================================================== -->
         <section id="upload-model">
           <div class="page-header" id="xmlContainer">
-            <h1>STEP 2 : UPLOAD YOUR 3D MODEL</h1>
+            <h2>STEP 2 : UPLOAD YOUR 3D MODEL</h2>
           </div>
-          <div class="container-fluid">
+          <div class="container">
             <form method="post" enctype="multipart/form-data" action="upload_file.php">
               <input type="file" name="xml" id="xml" multiple />
               <button type="submit" id="btnXml">UPLOAD COLLADA MODEL</button>
@@ -244,234 +250,225 @@
             <ul id="model-list">
             </ul>
           </div>
-
         </section>
         <!-- end upload models -->
 
-      <td>
-        <div>
-          <h4>STEP 3 : CLICK TO ADD IT</h4>
-          <button onclick="addModel()">ADD</button>
-          <button onclick="addAnother()">ADD ANOTHER MODEL</button>
-          <button onclick="reset()">RESET</button>
-        </div>
-      </td>
-      <td>
-        <h4>STEP 4 : SET DEVELOP MODER</h4>
-        <button onClick="normal()">NORMAL</button>
-        <button>PHYSICS-ENABLED</button>
-      </td>
-    </tr>
-  </table>
+        <!-- Add others ================================================= -->
+        <section id="add-others">
+          <div class="page-header">
+            <h2>STEP 3 : CLICK TO ADD</h2>
+          </div>
+          <div class="container">
+            <button onclick="addModel()">ADD</button>
+            <button onclick="addAnother()">ADD ANOTHER MODEL</button>
+            <button onclick="reset()">RESET</button>
+          </div>
+        </section>
+        <!-- end add others -->
 
+        <!-- View scene ================================================== -->
+        <section id="preview-scene">
+          <div class="page-header">
+            <h2>STEP 4 : PREVIEW SCENE</h2>
+          </div>
+          <div class="container">
+            <canvas id="canvas" width="800px" height="500px" style="cursor: default;"></canvas>
+          </div>
+        </section>
+        <!-- end view scene -->
 
-  <table id="secondtable">
-    <tr>
-      <td style="width: 80%">
-        <canvas id="canvas" width="900px" height="600px"></canvas>
-      </td>
-      <td>
-
-        <h3>STEP 5 : MODIFY PROPERTIES HERE</h3>
-        <table>
-          <tr>
-            <td>
-              <p class="ui-state-default ui-corner-all">
-                GRAPHIC PROPERTIES
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <table id="graphicsliders">
-                <tr>
-                  <td>
-                    <label for="plocX">locX</label>
-                    <input type="text" id="plocX" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="locxSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="plocY">locY</label>
-                    <input type="text" id="plocY" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="locySlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="plocZ">locZ</label>
-                    <input type="text" id="plocZ" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="loczSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="protX">rotX</label>
-                    <input type="text" id="protX" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="rotxSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="protY">rotY</label>
-                    <input type="text" id="protY" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="rotySlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="protZ">rotZ</label>
-                    <input type="text" id="protZ" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="rotzSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="pscaleX">scaleX</label>
-                    <input type="text" id="pscaleX" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="scaleXSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="pscaleY">scaleY</label>
-                    <input type="text" id="pscaleY" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="scaleYSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="pscaleZ">scaleZ</label>
-                    <input type="text" id="pscaleZ" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="scaleZSlider" class="mySliders"></div>
-                  </td>
-                </tr>
-              </table>
-
-              <table>
-                <tr>
-                  <td>
-                    <ol id="animselectable">
-                      <li class="ui-widget-content">None</li>
-                      <li class="ui-widget-content">Animation1</li>
-                      <li class="ui-widget-content">Animation2</li>
-                    </ol>
-                  </td>
-                  <td>
-                    <ol id="physicselectable">
-                      <li class="ui-widget-content">Plane</li>
-                      <li class="ui-widget-content">Mesh</li>
-                      <li class="ui-widget-content">Sphere</li>
-                      <li class="ui-widget-content">Box</li>
-                    </ol>
-                  </td>
-
-                  <td>
-                    <div id="massEditor">
-                      <label for="pMass">mass</label>
-                      <input type="text" id="pMass" style="border: 0; color: #f6931f; font-weight: bold;" />
-                      <div id="massSlider" class="mySliders"></div>
-                    </div>
-                  </td>
-                  <td>
-                    <div id="planeEditor">
-                      <table>
-                        <tr>
-                          <td>
-                            <label for="pDistance">distance</label>
-                            <input type="text" id="pDistance" style="border: 0; color: #f6931f; font-weight: bold;" />
-                            <div id="distanceSlider" class="mySliders"></div>
-                          </td>
-                          <td>
-                            <label for="pNormal">Normal</label>
-                            <input type="text" id="pNormal" style="border: 0; color: #f6931f; font-weight: bold;" />
-                            <div id="normalSlider" class="mySliders"></div>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div id="meshEditor">
-                    </div>
-                    <div id="sphereEditor">
-                      <label for="pRadius">radius</label>
-                      <input type="text" id="pRadius" style="border: 0; color: #f6931f; font-weight: bold;" />
-                      <div id="radiusSlider" class="mySliders"></div>
-                    </div>
-                    <div id="boxEditor">
-                      <table>
-                        <tr>
-                          <td>
-                            <label for="pHeight">height</label>
-                            <input type="text" id="pHeight" style="border: 0; color: #f6931f; font-weight: bold;" />
-                            <div id="heightSlider" class="mySliders"></div>
-                          </td>
-                          <td>
-                            <label for="pDepth">depth</label>
-                            <input type="text" id="pDepth" style="border: 0; color: #f6931f; font-weight: bold;" />
-                            <div id="depthSlider" class="mySliders"></div>
-                          </td>
-                          <td>
-                            <label for="pWidth">width</label>
-                            <input type="text" id="pWidth" style="border: 0; color: #f6931f; font-weight: bold;" />
-                            <div id="widthSlider" class="mySliders"></div>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- <td>
- <button onclick = "set()">modify</button>
- </td>
- -->
-
-              <p class="ui-state-default ui-corner-all">
-                Haptic properties
-              </p>
-              <table id="newtable">
-                <tr>
-                  <td>
-                    <label for="pstiffness">stiffness:</label>
-                    <input type="text" id="pstiffness" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="stiffnessSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="pdamping">damping:</label>
-                    <input type="text" id="pdamping" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="dampingSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="psfrictions">s.frictions:</label>
-                    <input type="text" id="psfrictions" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="sfrictionSlider" class="mySliders"></div>
-                  </td>
-                  <td>
-                    <label for="pdfrictions">d.frictions:</label>
-                    <input type="text" id="pdfrictions" style="border: 0; color: #f6931f; font-weight: bold;" />
-                    <div id="dfrictionSlider" class="mySliders"></div>
-                  </td>
-                </tr>
-              </table>
-
+        <!-- Modify properties ============================================ -->
+        <section id="modify-properties">
+          <div class="page-header">
+            <h2>STEP 5 : MODIFY PROPERTIES HERE</h2>
+          </div>
+          <div class="container">
+            <div class="ui-widget">
+            <div class="ui-state-default ui-corner-all">
+              <p>GRAPHIC PROPERTIES</p>
+            </div>
+          </div>
+            <table id="graphicsliders">
               <tr>
                 <td>
-                  <table id="lasttable">
-                    <tr>
-                      <td>
-                        <h3>Step5:Export application</h3>
-                        <button onClick="exportHaml()">Export</button>
-                        <ul id="hamlResponse"></ul>
-                      </td>
-                      <td>
-                        <h3 align="center">Step6: View haptic scene</h3>
-                        <h4 align="center"><a href="hapticplayer.html">Haptic Player</a>
-                        </h4>
-                      </td>
-                    </tr>
-                  </table>
+                  <label for="plocX">locX</label>
+                  <input type="text" id="plocX" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="locxSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="plocY">locY</label>
+                  <input type="text" id="plocY" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="locySlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="plocZ">locZ</label>
+                  <input type="text" id="plocZ" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="loczSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="protX">rotX</label>
+                  <input type="text" id="protX" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="rotxSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="protY">rotY</label>
+                  <input type="text" id="protY" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="rotySlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="protZ">rotZ</label>
+                  <input type="text" id="protZ" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="rotzSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="pscaleX">scaleX</label>
+                  <input type="text" id="pscaleX" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="scaleXSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="pscaleY">scaleY</label>
+                  <input type="text" id="pscaleY" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="scaleYSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="pscaleZ">scaleZ</label>
+                  <input type="text" id="pscaleZ" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="scaleZSlider" class="mySliders"></div>
                 </td>
               </tr>
-        </table>
-        </td>
-        </tr>
-  </table>
+            </table>
 
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
-  <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-  <script src="assets/js/docs.js" type="text/javascript"></script>
-  <script src="assets/js/demo.js" type="text/javascript"></script>
+            <table>
+              <tr>
+                <td>
+                  <ol id="animselectable">
+                    <li class="ui-widget-content">None</li>
+                    <li class="ui-widget-content">Animation1</li>
+                    <li class="ui-widget-content">Animation2</li>
+                  </ol>
+                </td>
+                <td>
+                  <ol id="physicselectable">
+                    <li class="ui-widget-content">Plane</li>
+                    <li class="ui-widget-content">Mesh</li>
+                    <li class="ui-widget-content">Sphere</li>
+                    <li class="ui-widget-content">Box</li>
+                  </ol>
+                </td>
 
-  <script type="text/javascript" src="js/index.js"></script>
+                <td>
+                  <div id="massEditor">
+                    <label for="pMass">mass</label>
+                    <input type="text" id="pMass" style="border: 0; color: #f6931f; font-weight: bold;" />
+                    <div id="massSlider" class="mySliders"></div>
+                  </div>
+                </td>
+                <td>
+                  <div id="planeEditor">
+                    <table>
+                      <tr>
+                        <td>
+                          <label for="pDistance">distance</label>
+                          <input type="text" id="pDistance" style="border: 0; color: #f6931f; font-weight: bold;" />
+                          <div id="distanceSlider" class="mySliders"></div>
+                        </td>
+                        <td>
+                          <label for="pNormal">Normal</label>
+                          <input type="text" id="pNormal" style="border: 0; color: #f6931f; font-weight: bold;" />
+                          <div id="normalSlider" class="mySliders"></div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="meshEditor">
+                  </div>
+                  <div id="sphereEditor">
+                    <label for="pRadius">radius</label>
+                    <input type="text" id="pRadius" style="border: 0; color: #f6931f; font-weight: bold;" />
+                    <div id="radiusSlider" class="mySliders"></div>
+                  </div>
+                  <div id="boxEditor">
+                    <table>
+                      <tr>
+                        <td>
+                          <label for="pHeight">height</label>
+                          <input type="text" id="pHeight" style="border: 0; color: #f6931f; font-weight: bold;" />
+                          <div id="heightSlider" class="mySliders"></div>
+                        </td>
+                        <td>
+                          <label for="pDepth">depth</label>
+                          <input type="text" id="pDepth" style="border: 0; color: #f6931f; font-weight: bold;" />
+                          <div id="depthSlider" class="mySliders"></div>
+                        </td>
+                        <td>
+                          <label for="pWidth">width</label>
+                          <input type="text" id="pWidth" style="border: 0; color: #f6931f; font-weight: bold;" />
+                          <div id="widthSlider" class="mySliders"></div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
 
-  </body>
+            <div class="ui-widget">
+            <div class="ui-state-default ui-corner-all">
+              <p>Haptic properties</p>
+            </div>
+          </div>
+            <table id="newtable">
+              <tr>
+                <td>
+                  <label for="pstiffness">stiffness:</label>
+                  <input type="text" id="pstiffness" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="stiffnessSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="pdamping">damping:</label>
+                  <input type="text" id="pdamping" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="dampingSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="psfrictions">s.frictions:</label>
+                  <input type="text" id="psfrictions" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="sfrictionSlider" class="mySliders"></div>
+                </td>
+                <td>
+                  <label for="pdfrictions">d.frictions:</label>
+                  <input type="text" id="pdfrictions" style="border: 0; color: #f6931f; font-weight: bold;" />
+                  <div id="dfrictionSlider" class="mySliders"></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <!-- end modify properties -->
+
+
+
+        <!-- Export application ========================================= -->
+        <section id="export-application">
+          <div class="page-header">
+            <h2>STEP 6 : EXPORT APPLICATION</h2>
+          </div>
+          <div class="container">
+            <button onClick="exportHaml()">Export</button>
+            <ul id="hamlResponse"></ul>
+          </div>
+        </section>
+        <!-- end export application -->
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+        <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+        <script src="assets/js/docs.js" type="text/javascript"></script>
+        <script src="assets/js/demo.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
 </html>
