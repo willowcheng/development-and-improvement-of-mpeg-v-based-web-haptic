@@ -218,7 +218,7 @@ function view() {
   var drag = false;
   var view = false;
   var rotY = 0;
-  var cameraPos = [10, 5, 20];
+  var cameraPos = [0.1, 5, 20];
   //var v = [0,0];
   canvas.onmousedown = function(e) {
     mousechange = true;
@@ -237,6 +237,7 @@ function view() {
   canvas.onmousemove = function(e) {
     mousechange = true;
     mousePos = [e.clientX, e.clientY];
+
     if (view) {
       cameraPos[0] = startpoint[2] - (e.clientX - startpoint[0]) / canvas.width * 20;
       cameraPos[1] = startpoint[3] + (e.clientY - startpoint[1]) / canvas.height * 20;
@@ -244,18 +245,38 @@ function view() {
       camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
       cameraOffset.setRotY(cameraPos[0] / 10);
       cameraOffset.setLocY(cameraPos[1]);
+      console.log(cameraPos[0]/10, cameraPos[1]);
       render = true;
     }
   }
-  canvas.onmousewheel = function(e) {
-    var wheelData = e.detail ? e.detail / 10 : e.wheelDelta / -300;
-    cameraPos[2] += wheelData;
-    if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
-    camera.setLocZ(cameraPos[2]);
-    camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
-    render = true;
-  }
-  canvas.addEventListener('DOMMouseScroll', canvas.onmousewheel, false);
+  // Use '<' and '>' to control the view distance of scene
+  document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 188) {
+      var wheelData = 0.2;
+      cameraPos[2] += wheelData;
+      if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
+      camera.setLocZ(cameraPos[2]);
+      camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
+      render = true;
+    }
+    else if(event.keyCode == 190) {
+      var wheelData = -0.2;
+      cameraPos[2] += wheelData;
+      if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
+      camera.setLocZ(cameraPos[2]);
+      camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
+      render = true;
+    }
+  });
+  // canvas.onmousewheel = function(e) {
+  //   var wheelData = e.detail ? e.detail / 10 : e.wheelDelta / -300;
+  //   cameraPos[2] += wheelData;
+  //   if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
+  //   camera.setLocZ(cameraPos[2]);
+  //   camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
+  //   render = true;
+  // }
+  // canvas.addEventListener('DOMMouseScroll', canvas.onmousewheel, false);
 
 
   canvas.oncontextmenu = function(e) {

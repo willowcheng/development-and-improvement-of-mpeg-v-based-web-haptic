@@ -1,0 +1,22 @@
+.header_background {
+    position: relative;
+    padding: 40px 0;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+    background: -webkit-linear-gradient(45deg, #D32F2F 0%, #EF9A9A 100%);
+    background-image: -webkit-linear-gradient(45deg, #D32F2F 0%, #EF9A9A 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
+}
+
+h1 {
+    font-size: 48px;
+}
