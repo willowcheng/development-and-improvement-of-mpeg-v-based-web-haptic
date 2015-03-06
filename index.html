@@ -209,11 +209,7 @@
     <div class="row">
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#upload-image"><i class="icon-chevron-right"></i> Upload Images</a>
-                </li>
-                <li><a href="#upload-model"><i class="icon-chevron-right"></i> Upload 3D Models</a>
-                </li>
-                <li><a href="#add-others"><i class="icon-chevron-right"></i> Add Models</a>
+                <li><a href="#upload-stage"><i class="icon-chevron-right"></i> Upload Images</a>
                 </li>
                 <li><a href="#preview-scene"><i class="icon-chevron-right"></i> Preview Scene</a>
                 </li>
@@ -226,53 +222,35 @@
 
         <div class="span9">
             <!-- Upload images ================================================== -->
-            <section id="upload-image">
+            <section id="upload-stage">
                 <div class="page-header">
-                    <h2>STEP 1 : UPLOAD YOUR IMAGES</h2>
+                    <h2><span class="label label-default">1</span> UPLOAD TEXTURE & MODEL</h2>
                 </div>
                 <form method="post" enctype="multipart/form-data" action="upload.php">
-                    <input type="file" name="images" id="images" multiple/>
-                    <button type="submit" id="btn">UPLOAD FILES</button>
+                    <b>TEXTURE  </b> <input type="file" name="images" id="images" multiple/>
+                     <button type="submit" id="btn">UPLOAD FILES</button>
                 </form>
                 <div id="response"></div>
                 <ul id="image-list">
                 </ul>
-            </section>
-            <!-- end upload images -->
 
-
-            <!-- Upload models ========================================================== -->
-            <section id="upload-model">
-                <div class="page-header" id="xmlContainer">
-                    <h2>STEP 2 : UPLOAD YOUR 3D MODEL</h2>
-                </div>
                 <form method="post" enctype="multipart/form-data" action="upload_file.php">
-                    <input type="file" name="xml" id="xml" multiple/>
+                    <b>3D MODEL  </b><input type="file" name="xml" id="xml" multiple/>
                     <button type="submit" id="btnXml">UPLOAD COLLADA MODEL</button>
                 </form>
                 <div id="xmlResponse"></div>
                 <ul id="model-list">
                 </ul>
-
-            </section>
-            <!-- end upload models -->
-
-            <!-- Add others ================================================= -->
-            <section id="add-others">
-                <div class="page-header">
-                    <h2>STEP 3 : CLICK TO ADD</h2>
-                </div>
                 <button onclick="addModel()">ADD</button>
                 <button onclick="addAnother()">ADD ANOTHER MODEL</button>
                 <button onclick="reset()">RESET</button>
-
             </section>
-            <!-- end add others -->
+            <!-- end upload images -->
 
             <!-- View scene ================================================== -->
             <section id="preview-scene">
                 <div class="page-header">
-                    <h2>STEP 4 : PREVIEW SCENE</h2>
+                    <h2><span class="label label-default">2</span> PREVIEW SCENE</h2>
                 </div>
                 <canvas id="canvas" width="800px" height="500px" style="cursor: default;"></canvas>
 
@@ -282,7 +260,7 @@
             <!-- Modify properties ============================================ -->
             <section id="modify-properties">
                 <div class="page-header">
-                    <h2>STEP 5 : MODIFY PROPERTIES HERE</h2>
+                    <h2><span class="label label-default">3</span> MODIFY PROPERTIES HERE</h2>
                 </div>
                 <div class="ui-widget">
                     <div class="ui-state-default ui-corner-all">
@@ -475,7 +453,7 @@
             <!-- Export application ========================================= -->
             <section id="export-application">
                 <div class="page-header">
-                    <h2>STEP 6 : EXPORT APPLICATION</h2>
+                    <h2><span class="label label-default">4</span> EXPORT APPLICATION</h2>
                 </div>
                 <button onClick="exportHaml()">Export</button>
                 <ul id="hamlResponse"></ul>
@@ -493,7 +471,7 @@
 <footer class="footer">
     <div class="container">
         <p>
-            Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao & Liu Cheng 2012 - 2015
+            Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao, Liu Cheng, Haiwei Dong & Hussein AI Osman 2012 - 2015
         </p>
 
         <p>
