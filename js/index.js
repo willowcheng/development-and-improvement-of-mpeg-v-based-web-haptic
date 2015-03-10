@@ -465,7 +465,7 @@ var animations = new Array();
 animations = ['bob', 'disappear'];
 
 doc.onLoad = function() {
-  animationVector = [0, doc.getElement("bob"), doc.getElement("disappear")];
+    animationVector = [0, doc.getElement("flow"),doc.getElement("circle"),doc.getElement("bob"),doc.getElement("spin"), doc.getElement("disappear")];
   scene = doc.getElement("mainscene");
   camera = doc.getElement("mainCamera");
   cameraOffset = doc.getElement("cameraOffset");
