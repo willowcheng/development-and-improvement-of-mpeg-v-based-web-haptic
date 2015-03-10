@@ -658,6 +658,7 @@ function addModel() {
     selectObject(this);
   });
   set();
+  addAnother();
 }
 
 
