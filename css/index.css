@@ -56,3 +56,9 @@ h1 {
 .navbar-inverse .nav .active > a {
     background-color: #111;
 }
+table td {
+    width: 80px;
+    display: inline-block;
+    white-space: nowrap;
+    height: 180px;
+}

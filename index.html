@@ -229,7 +229,7 @@
                     <h2><span class="label label-default">1</span> UPLOAD TEXTURE & MODEL</h2>
                 </div>
                 <form method="post" enctype="multipart/form-data" action="upload.php">
-                    <b>TEXTURE </b> <input type="file" name="images" id="images" multiple/>
+                    <b>TEXTURE </b> <input type="file" name="images" id="images" multiple>
                     <button type="submit" id="btn">UPLOAD FILES</button>
                 </form>
                 <div id="response"></div>
@@ -265,21 +265,10 @@
                 <div class="page-header">
                     <h2><span class="label label-default">3</span> MODIFY PROPERTIES HERE</h2>
                 </div>
-                <div id="menu-collapse" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
-                    <div class>
-                        <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active ui-corner-top"
-                            role="tab" id="ui-accordion-menu-collapse-header-0"
-                            aria-controls="ui-accordion-menu-collapse-panel-0" aria-selected="true" tabindex="0"><span
-                                class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"
-                                style="background-image: url(assets/css/custom-theme/images/ui-icons_454545_256x240.png)"></span>GRAPHIC
-                        </h3>
-
-                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
-                             id="ui-accordion-menu-collapse-panel-0"
-                             aria-labelledby="ui-accordion-menu-collapse-header-0" role="tabpanel" aria-expanded="true"
-                             aria-hidden="false" style="height: 43px; display: block;">
-                            <div class="ui-widget">
-                            </div>
+                <div id="menu-collapse">
+                    <div>
+                        <h3 style="padding-left: 2.2em; padding-top: 10px; padding-bottom: 10px;">GRAPHIC</h3>
+                        <div>
                             <table id="graphicsliders">
                                 <tr>
                                     <td>
@@ -442,18 +431,10 @@
                             </table>
                         </div>
                     </div>
-                    <div class="">
-                        <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
-                            role="tab" id="ui-accordion-menu-collapse-header-1"
-                            aria-controls="ui-accordion-menu-collapse-panel-1" aria-selected="false" tabindex="-1"><span
-                                class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"
-                                style="background-image: url(assets/css/custom-theme/images/ui-icons_454545_256x240.png)"></span>HAPTIC
-                        </h3>
+                    <div>
+                        <h3 style="padding-left: 2.2em; padding-top: 10px; padding-bottom: 10px;">HAPTIC</h3>
 
-                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                             id="ui-accordion-menu-collapse-panel-1"
-                             aria-labelledby="ui-accordion-menu-collapse-header-1" role="tabpanel" aria-expanded="false"
-                             aria-hidden="true" style="height: 43px; display: none;">
+                        <div>
                             <table id="newtable">
                                 <tr>
                                     <td>
