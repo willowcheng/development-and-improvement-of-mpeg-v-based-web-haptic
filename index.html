@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <embed type="application/x-vnd-haptics" id="pluginobj" style="width:0; height:0"/>
     <meta charset="utf-8">
     <title>Web MPEGV Haptic Authoring Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,52 +10,8 @@
           content="Use haptic authoring tool to construct object which could be used in haptic player.">
     <meta name="author" content="Liu Cheng">
 
-
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-
-
-
-
-    <!-- Le styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/custom-theme/jquery-ui-1.10.0.custom.css">
-    <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.theme.css">-->
-    <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.3.ie.css">
-    <![endif]-->
-    <link rel="stylesheet" href="assets/css/docs.css">
-    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
-    <!--begin wijmo menu-->
-    <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css"/>
-    <!--End wijmo menu-->
-    <!--begin file input-->
-    <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
-    <!--End file input-->
-
-    <!-- jqGrid-->
-    <link rel="stylesheet" href="third-party/jqGrid/jqGrid/css/ui.jqgrid.css"/>
-    <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css">
-    <!-- end jqGrid -->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="assets/js/vendor/html5shiv.js" type="text/javascript"></script>
-    <script src="assets/js/vendor/respond.min.js" type="text/javascript"></script>
-    <![endif]-->
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-
-    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <script src="js/glge-compiled-min.js"></script>
+    <script src="js/jiglib.js"></script>
     <script id="glge_document" type="text/xml">
         <glge>
             <mesh id="groundMesh">
@@ -105,8 +62,8 @@
             </animation_vector>
             <animation_vector id="circle" frames="480">
                 <animation_curve channel="RotZ">
-                    <linear_point x="0" y="0" />
-                    <linear_point x="480" y="6.282" />
+                    <linear_point x="0" y="0"/>
+                    <linear_point x="480" y="6.282"/>
                 </animation_curve>
             </animation_vector>
 
@@ -137,12 +94,12 @@
 
             <animation_vector id="spin" frames="240">
                 <animation_curve channel="RotY">
-                    <linear_point x="0" y="0" />
-                    <linear_point x="240" y="6.282" />
+                    <linear_point x="0" y="0"/>
+                    <linear_point x="240" y="6.282"/>
                 </animation_curve>
                 <animation_curve channel="RotZ">
-                    <linear_point x="0" y="0" />
-                    <linear_point x="240" y="6.282" />
+                    <linear_point x="0" y="0"/>
+                    <linear_point x="240" y="6.282"/>
                 </animation_curve>
             </animation_vector>
 
@@ -170,6 +127,38 @@
             </scene>
         </glge>
     </script>
+
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet"/>
+    <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="assets/css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+    <![endif]-->
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <!--<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>-->
+    <!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+
 </head>
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
@@ -184,6 +173,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
             <a class="brand" href="./index.html">WEB MPEG-V HAPTIC</a>
 
             <div class="nav-collapse collapse">
@@ -277,196 +267,230 @@
                 </div>
                 <div id="menu-collapse" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
                     <div class>
-                        <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active ui-corner-top" role="tab" id="ui-accordion-menu-collapse-header-0" aria-controls="ui-accordion-menu-collapse-panel-0" aria-selected="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s" style="background-image: url(assets/css/custom-theme/images/ui-icons_454545_256x240.png)"></span>GRAPHIC</h3>
-                    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="ui-accordion-menu-collapse-panel-0" aria-labelledby="ui-accordion-menu-collapse-header-0" role="tabpanel" aria-expanded="true" aria-hidden="false" style="height: 43px; display: block;"><div class="ui-widget">
-                    </div>
-                        <table id="graphicsliders">
-                            <tr>
-                                <td>
-                                    <label for="plocX">locX</label>
-                                    <input type="text" id="plocX" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                        <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active ui-corner-top"
+                            role="tab" id="ui-accordion-menu-collapse-header-0"
+                            aria-controls="ui-accordion-menu-collapse-panel-0" aria-selected="true" tabindex="0"><span
+                                class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"
+                                style="background-image: url(assets/css/custom-theme/images/ui-icons_454545_256x240.png)"></span>GRAPHIC
+                        </h3>
 
-                                    <div id="locxSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="plocY">locY</label>
-                                    <input type="text" id="plocY" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
+                             id="ui-accordion-menu-collapse-panel-0"
+                             aria-labelledby="ui-accordion-menu-collapse-header-0" role="tabpanel" aria-expanded="true"
+                             aria-hidden="false" style="height: 43px; display: block;">
+                            <div class="ui-widget">
+                            </div>
+                            <table id="graphicsliders">
+                                <tr>
+                                    <td>
+                                        <label for="plocX">locX</label>
+                                        <input type="text" id="plocX"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="locySlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="plocZ">locZ</label>
-                                    <input type="text" id="plocZ" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="locxSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="plocY">locY</label>
+                                        <input type="text" id="plocY"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="loczSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="protX">rotX</label>
-                                    <input type="text" id="protX" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="locySlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="plocZ">locZ</label>
+                                        <input type="text" id="plocZ"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="rotxSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="protY">rotY</label>
-                                    <input type="text" id="protY" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="loczSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="protX">rotX</label>
+                                        <input type="text" id="protX"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="rotySlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="protZ">rotZ</label>
-                                    <input type="text" id="protZ" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="rotxSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="protY">rotY</label>
+                                        <input type="text" id="protY"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="rotzSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="pscaleX">scaleX</label>
-                                    <input type="text" id="pscaleX" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="rotySlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="protZ">rotZ</label>
+                                        <input type="text" id="protZ"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="scaleXSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="pscaleY">scaleY</label>
-                                    <input type="text" id="pscaleY" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="rotzSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="pscaleX">scaleX</label>
+                                        <input type="text" id="pscaleX"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="scaleYSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="pscaleZ">scaleZ</label>
-                                    <input type="text" id="pscaleZ" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="scaleXSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="pscaleY">scaleY</label>
+                                        <input type="text" id="pscaleY"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="scaleZSlider" class="mySliders"></div>
-                                </td>
-                            </tr>
-                        </table>
+                                        <div id="scaleYSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="pscaleZ">scaleZ</label>
+                                        <input type="text" id="pscaleZ"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                        <table>
-                            <tr>
-                                <td>
-                                    <p>Animation</p>
-                                    <ol id="animselectable">
-                                        <li class="ui-widget-content" id="anim_pulse">Pulse</li>
-                                        <li class="ui-widget-content">None</li>
-                                        <li class="ui-widget-content">Circle</li>
-                                        <li class="ui-widget-content">Bob</li>
-                                        <li class="ui-widget-content">Spin</li>
-                                        <li class="ui-widget-content">Disappear</li>
-                                    </ol>
-                                </td>
-                                <td>
-                                    <p>Physics</p>
-                                    <ol id="physicselectable">
-                                        <li class="ui-widget-content">Plane</li>
-                                        <li class="ui-widget-content">Mesh</li>
-                                        <li class="ui-widget-content">Sphere</li>
-                                        <li class="ui-widget-content">Box</li>
-                                    </ol>
-                                </td>
+                                        <div id="scaleZSlider" class="mySliders"></div>
+                                    </td>
+                                </tr>
+                            </table>
 
-                                <td>
-                                    <div id="massEditor">
-                                        <label for="pMass">mass</label>
-                                        <input type="text" id="pMass" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>Animation</p>
+                                        <ol id="animselectable">
+                                            <li class="ui-widget-content" id="anim_pulse">Pulse</li>
+                                            <li class="ui-widget-content">None</li>
+                                            <li class="ui-widget-content">Circle</li>
+                                            <li class="ui-widget-content">Bob</li>
+                                            <li class="ui-widget-content">Spin</li>
+                                            <li class="ui-widget-content">Disappear</li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <p>Physics</p>
+                                        <ol id="physicselectable">
+                                            <li class="ui-widget-content">Plane</li>
+                                            <li class="ui-widget-content">Mesh</li>
+                                            <li class="ui-widget-content">Sphere</li>
+                                            <li class="ui-widget-content">Box</li>
+                                        </ol>
+                                    </td>
 
-                                        <div id="massSlider" class="mySliders"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div id="planeEditor">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <label for="pDistance">distance</label>
-                                                    <input type="text" id="pDistance"
-                                                           style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                    <td>
+                                        <div id="massEditor">
+                                            <label for="pMass">mass</label>
+                                            <input type="text" id="pMass"
+                                                   style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                                    <div id="distanceSlider" class="mySliders"></div>
-                                                </td>
-                                                <td>
-                                                    <label for="pNormal">Normal</label>
-                                                    <input type="text" id="pNormal"
-                                                           style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                            <div id="massSlider" class="mySliders"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="planeEditor">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <label for="pDistance">distance</label>
+                                                        <input type="text" id="pDistance"
+                                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                                    <div id="normalSlider" class="mySliders"></div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div id="meshEditor">
-                                    </div>
-                                    <div id="sphereEditor">
-                                        <label for="pRadius">radius</label>
-                                        <input type="text" id="pRadius" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <div id="distanceSlider" class="mySliders"></div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="pNormal">Normal</label>
+                                                        <input type="text" id="pNormal"
+                                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                        <div id="radiusSlider" class="mySliders"></div>
-                                    </div>
-                                    <div id="boxEditor">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <label for="pHeight">height</label>
-                                                    <input type="text" id="pHeight"
-                                                           style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <div id="normalSlider" class="mySliders"></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div id="meshEditor">
+                                        </div>
+                                        <div id="sphereEditor">
+                                            <label for="pRadius">radius</label>
+                                            <input type="text" id="pRadius"
+                                                   style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                                    <div id="heightSlider" class="mySliders"></div>
-                                                </td>
-                                                <td>
-                                                    <label for="pDepth">depth</label>
-                                                    <input type="text" id="pDepth"
-                                                           style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                            <div id="radiusSlider" class="mySliders"></div>
+                                        </div>
+                                        <div id="boxEditor">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <label for="pHeight">height</label>
+                                                        <input type="text" id="pHeight"
+                                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                                    <div id="depthSlider" class="mySliders"></div>
-                                                </td>
-                                                <td>
-                                                    <label for="pWidth">width</label>
-                                                    <input type="text" id="pWidth"
-                                                           style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <div id="heightSlider" class="mySliders"></div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="pDepth">depth</label>
+                                                        <input type="text" id="pDepth"
+                                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                                    <div id="widthSlider" class="mySliders"></div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table></div>
+                                                        <div id="depthSlider" class="mySliders"></div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="pWidth">width</label>
+                                                        <input type="text" id="pWidth"
+                                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+
+                                                        <div id="widthSlider" class="mySliders"></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                     <div class="">
-                        <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-menu-collapse-header-1" aria-controls="ui-accordion-menu-collapse-panel-1" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e" style="background-image: url(assets/css/custom-theme/images/ui-icons_454545_256x240.png)"></span>HAPTIC</h3>
-                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-menu-collapse-panel-1" aria-labelledby="ui-accordion-menu-collapse-header-1" role="tabpanel" aria-expanded="false" aria-hidden="true" style="height: 43px; display: none;"><table id="newtable">
-                            <tr>
-                                <td>
-                                    <label for="pstiffness">stiffness:</label>
-                                    <input type="text" id="pstiffness" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                        <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all"
+                            role="tab" id="ui-accordion-menu-collapse-header-1"
+                            aria-controls="ui-accordion-menu-collapse-panel-1" aria-selected="false" tabindex="-1"><span
+                                class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"
+                                style="background-image: url(assets/css/custom-theme/images/ui-icons_454545_256x240.png)"></span>HAPTIC
+                        </h3>
 
-                                    <div id="stiffnessSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="pdamping">damping:</label>
-                                    <input type="text" id="pdamping" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
+                             id="ui-accordion-menu-collapse-panel-1"
+                             aria-labelledby="ui-accordion-menu-collapse-header-1" role="tabpanel" aria-expanded="false"
+                             aria-hidden="true" style="height: 43px; display: none;">
+                            <table id="newtable">
+                                <tr>
+                                    <td>
+                                        <label for="pstiffness">stiffness:</label>
+                                        <input type="text" id="pstiffness"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="dampingSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="psfrictions">s.frictions:</label>
-                                    <input type="text" id="psfrictions" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="stiffnessSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="pdamping">damping:</label>
+                                        <input type="text" id="pdamping"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="sfrictionSlider" class="mySliders"></div>
-                                </td>
-                                <td>
-                                    <label for="pdfrictions">d.frictions:</label>
-                                    <input type="text" id="pdfrictions" style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <div id="dampingSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="psfrictions">s.frictions:</label>
+                                        <input type="text" id="psfrictions"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
 
-                                    <div id="dfrictionSlider" class="mySliders"></div>
-                                </td>
-                            </tr>
-                        </table></div>
+                                        <div id="sfrictionSlider" class="mySliders"></div>
+                                    </td>
+                                    <td>
+                                        <label for="pdfrictions">d.frictions:</label>
+                                        <input type="text" id="pdfrictions"
+                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+
+                                        <div id="dfrictionSlider" class="mySliders"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
 
-
-
-
-        </div>
+                </div>
 
 
             </section>
@@ -478,7 +502,9 @@
                 <div class="page-header">
                     <h2><span class="label label-default">4</span> EXPORT APPLICATION</h2>
                 </div>
-                <button class="ui-button-primary ui-btn-lg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onClick="exportHaml()">Export</button>
+                <button class="ui-button-primary ui-btn-lg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                        onClick="exportHaml()">Export
+                </button>
                 <ul id="hamlResponse"></ul>
 
             </section>
@@ -518,11 +544,8 @@
 <script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
 <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
 <script src="assets/js/docs.js" type="text/javascript"></script>
-<script src="assets/js/demo.js" type="text/javascript"></script>
 
-<script src="js/glge-compiled-min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-
+<script src="js/index.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -201,7 +201,9 @@ $(function() {
     }
   });
   $("#pdfrictions").val($("#dfrictionSlider").slider("value") / 100);
-  $("input[type=submit],input[type=file],  a, button").button();
+    // TODO
+    //$("input[type=submit],input[type=file],  a, button").button();
+  $("input[type=submit],input[type=file], button").button();
   $("#animselectable").selectable({
     stop: function() {
       //var result = $( "#select-result" ).empty();
@@ -671,9 +673,9 @@ function addAnother() {
   text.innerHTML = "";
 }
 
-function reset() {
-  document.location.reload(true);
-}
+//function reset() {
+//  document.location.reload(true);
+//}
 
 
 function exportHaml() {
