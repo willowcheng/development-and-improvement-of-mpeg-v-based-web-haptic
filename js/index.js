@@ -29,7 +29,7 @@ function modelProp(locx, locy, locz, rotx, roty, rotz, scaleX, scaleY, scaleZ, a
 
 
 $(function () {
-
+    //$('.radioset').buttonset();
     //$( "#accordion" ).accordion();
     $("#physicselectable").selectable();
     $("#locxSlider").slider({
