@@ -229,13 +229,6 @@
                     <h2><span class="label label-default">1</span> UPLOAD TEXTURE & MODEL</h2>
                 </div>
                 <a id="download" class="download-btn ui-button-primary" href="download/resources-package.zip">Download Texture and Model Packages</a>
-                <form method="post" enctype="multipart/form-data" action="upload.php">
-                    <b>TEXTURE </b> <input type="file" name="images" id="images" multiple>
-                    <button type="submit" id="btn">UPLOAD FILES</button>
-                </form>
-                <div id="response"></div>
-                <ul id="image-list">
-                </ul>
 
                 <form method="post" enctype="multipart/form-data" action="upload_file.php">
                     <b>3D MODEL </b><input type="file" name="xml" id="xml" multiple/>
@@ -244,6 +237,14 @@
                 <div id="xmlResponse"></div>
                 <ul id="model-list">
                 </ul>
+                <form method="post" enctype="multipart/form-data" action="upload.php">
+                    <b>TEXTURE </b> <input type="file" name="images" id="images" multiple>
+                    <button type="submit" id="btn">UPLOAD FILES</button>
+                </form>
+                <div id="response"></div>
+                <ul id="image-list">
+                </ul>
+
                 <button class="ui-button-primary ui-btn-lg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
                         onclick="addModel()">ADD TO SCENE
                 </button>
