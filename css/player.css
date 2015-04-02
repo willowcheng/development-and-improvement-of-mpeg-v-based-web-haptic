@@ -57,3 +57,7 @@ h1 {
 textarea {
     width: 100%;
 }
+
+#download {
+    margin-bottom: 12px;
+}
