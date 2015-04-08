@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <embed type="application/x-vnd-haptics" id="pluginobj" style="width:0; height:0"/>
     <meta charset="utf-8">
@@ -10,8 +9,11 @@
           content="Use haptic authoring tool to construct object which could be used in haptic player.">
     <meta name="author" content="Liu Cheng">
 
+    <!-- GLGE library -->
     <script src="js/glge-compiled-min.js"></script>
     <script src="js/jiglib.js"></script>
+
+    <!-- GLGE document XML for scene -->
     <script id="glge_document" type="text/xml">
         <glge>
             <mesh id="groundMesh">
@@ -154,17 +156,14 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <!--<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>-->
-    <!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
-
+    <!-- Customized CSS for index page -->
     <link rel="stylesheet" href="css/index.css" type="text/css"/>
 
 </head>
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
 
-<!-- Navbar
-================================================== -->
+<!-- Navbar ================================================== -->
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -195,9 +194,9 @@
         </div>
     </div>
 </div>
+<!-- end navbar -->
 
-<!-- Subhead
-=============================================== -->
+<!-- Subhead =============================================== -->
 <header class="bs-header header_background" id="overview">
     <div class="container">
         <h1>Web MPEG-V Haptic Authoring Tool</h1>
@@ -205,11 +204,12 @@
         <p class="lead">Follow the instruction to export your application.</p>
     </div>
 </header>
+<!-- end subhead -->
 
 <div class="container">
-    <!-- Docs nav ================================================== -->
     <div class="row">
-        <div class="span7 bs-docs-sidebar" style="float: right;">
+        <!-- Side nav ================================================== -->
+        <div id="sidebar" class="span7 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
                 <li><a href="#upload-stage"><i class="icon-chevron-left"></i> Upload Stage</a>
                 </li>
@@ -219,12 +219,13 @@
                 </li>
                 <!-- View scene ================================================== -->
                 <section>
-                        <h3 style="text-align: center; color: #2196F3">PREVIEW</h3>
-                    <canvas id="canvas" width="640px" height="400px" style="cursor: default;"></canvas>
+                    <h3 id="preview-title">PREVIEW</h3>
+                    <canvas id="canvas" width="640px" height="400px"></canvas>
                 </section>
                 <!-- end view scene -->
             </ul>
         </div>
+        <!-- end side nav -->
 
         <div class="span5">
             <!-- Upload images ================================================== -->
@@ -232,27 +233,26 @@
                 <div class="page-header">
                     <h2><span class="label label-default">1</span> UPLOAD TEXTURE & MODEL</h2>
                 </div>
-                <a id="download" class="download-btn ui-button-primary" href="download/resources-package.zip">Download Model and Texture Packages</a>
+                <a id="download" class="download-btn ui-button-primary" href="download/resources-package.zip">Download
+                    Model and Texture Packages</a>
 
-                <form method="post" enctype="multipart/form-data" action="upload_file.php">
+                <form method="post" enctype="multipart/form-data" action="php/upload_model.php">
                     <b>3D MODEL </b><input type="file" name="xml" id="xml" multiple/>
                     <button type="submit" id="btnXml">UPLOAD COLLADA MODEL</button>
                 </form>
                 <div id="xmlResponse"></div>
                 <ul id="model-list">
                 </ul>
-                <form method="post" enctype="multipart/form-data" action="upload.php">
+                <form method="post" enctype="multipart/form-data" action="php/upload_texture.php">
                     <b>TEXTURE </b> <input type="file" name="images" id="images" multiple>
                     <button type="submit" id="btn">UPLOAD FILES</button>
                 </form>
                 <div id="response"></div>
                 <ul id="image-list">
                 </ul>
-
                 <button class="ui-button-primary ui-btn-lg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
                         onclick="addModel()">ADD TO SCENE
                 </button>
-                <!--<button onclick="reset()">RESET</button>-->
             </section>
             <!-- end upload images -->
 
@@ -263,70 +263,62 @@
                 </div>
                 <div id="menu-collapse">
                     <div>
-                        <h3 style="padding-left: 2.2em; padding-top: 10px; padding-bottom: 10px;">GRAPHIC</h3>
+                        <h3 class="collapse-title">GRAPHIC</h3>
+
                         <div>
-                            <table id="graphicsliders">
+                            <table id="graphic-sliders">
                                 <tr>
                                     <td>
                                         <label for="plocX">locX</label>
-                                        <input type="text" id="plocX"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="plocX" class="vertical-slidebar"/>
 
                                         <div id="locxSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="plocY">locY</label>
-                                        <input type="text" id="plocY"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="plocY" class="vertical-slidebar"/>
 
                                         <div id="locySlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="plocZ">locZ</label>
-                                        <input type="text" id="plocZ"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="plocZ" class="vertical-slidebar"/>
 
                                         <div id="loczSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="protX">rotX</label>
-                                        <input type="text" id="protX"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="protX" class="vertical-slidebar"/>
 
                                         <div id="rotxSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="protY">rotY</label>
-                                        <input type="text" id="protY"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="protY" class="vertical-slidebar"/>
 
                                         <div id="rotySlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="protZ">rotZ</label>
-                                        <input type="text" id="protZ"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="protZ" class="vertical-slidebar"/>
 
                                         <div id="rotzSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="pscaleX">scaleX</label>
-                                        <input type="text" id="pscaleX"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="pscaleX" class="vertical-slidebar"/>
 
                                         <div id="scaleXSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="pscaleY">scaleY</label>
-                                        <input type="text" id="pscaleY"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="pscaleY" class="vertical-slidebar"/>
 
                                         <div id="scaleYSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="pscaleZ">scaleZ</label>
-                                        <input type="text" id="pscaleZ"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="pscaleZ" class="vertical-slidebar"/>
 
                                         <div id="scaleZSlider" class="mySliders"></div>
                                     </td>
@@ -359,8 +351,7 @@
                                     <td>
                                         <div id="massEditor">
                                             <label for="pMass">mass</label>
-                                            <input type="text" id="pMass"
-                                                   style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                            <input type="text" id="pMass" class="vertical-slidebar"/>
 
                                             <div id="massSlider" class="mySliders"></div>
                                         </div>
@@ -371,15 +362,13 @@
                                                 <tr>
                                                     <td>
                                                         <label for="pDistance">distance</label>
-                                                        <input type="text" id="pDistance"
-                                                               style="margin-top: -2px; border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <input type="text" id="pDistance" class="physics-slidebar"/>
 
                                                         <div id="distanceSlider" class="mySliders"></div>
                                                     </td>
                                                     <td>
                                                         <label for="pNormal">Normal</label>
-                                                        <input type="text" id="pNormal"
-                                                               style="margin-top: -2px; border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <input type="text" id="pNormal" class="physics-slidebar"/>
 
                                                         <div id="normalSlider" class="mySliders"></div>
                                                     </td>
@@ -390,8 +379,7 @@
                                         </div>
                                         <div id="sphereEditor">
                                             <label for="pRadius">radius</label>
-                                            <input type="text" id="pRadius"
-                                                   style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                            <input type="text" id="pRadius" class="vertical-slidebar"/>
 
                                             <div id="radiusSlider" class="mySliders"></div>
                                         </div>
@@ -400,22 +388,19 @@
                                                 <tr>
                                                     <td>
                                                         <label for="pHeight">height</label>
-                                                        <input type="text" id="pHeight"
-                                                               style="margin-top: -2px; border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <input type="text" id="pHeight" class="physics-slidebar"/>
 
                                                         <div id="heightSlider" class="mySliders"></div>
                                                     </td>
                                                     <td>
                                                         <label for="pDepth">depth</label>
-                                                        <input type="text" id="pDepth"
-                                                               style="margin-top: -2px; border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <input type="text" id="pDepth" class="physics-slidebar"/>
 
                                                         <div id="depthSlider" class="mySliders"></div>
                                                     </td>
                                                     <td>
                                                         <label for="pWidth">width</label>
-                                                        <input type="text" id="pWidth"
-                                                               style="margin-top: -2px; border: 0; color: #f6931f; font-weight: bold;"/>
+                                                        <input type="text" id="pWidth" class="physics-slidebar"/>
 
                                                         <div id="widthSlider" class="mySliders"></div>
                                                     </td>
@@ -428,36 +413,32 @@
                         </div>
                     </div>
                     <div>
-                        <h3 style="padding-left: 2.2em; padding-top: 10px; padding-bottom: 10px;">HAPTIC</h3>
+                        <h3 class="collapse-title">HAPTIC</h3>
 
                         <div>
                             <table id="newtable">
                                 <tr>
                                     <td>
                                         <label for="pstiffness">stiffness:</label>
-                                        <input type="text" id="pstiffness"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="pstiffness" class="vertical-slidebar"/>
 
                                         <div id="stiffnessSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="pdamping">damping:</label>
-                                        <input type="text" id="pdamping"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="pdamping" class="vertical-slidebar"/>
 
                                         <div id="dampingSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="psfrictions">s.frictions:</label>
-                                        <input type="text" id="psfrictions"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="psfrictions" class="vertical-slidebar"/>
 
                                         <div id="sfrictionSlider" class="mySliders"></div>
                                     </td>
                                     <td>
                                         <label for="pdfrictions">d.frictions:</label>
-                                        <input type="text" id="pdfrictions"
-                                               style="border: 0; color: #f6931f; font-weight: bold;"/>
+                                        <input type="text" id="pdfrictions" class="vertical-slidebar"/>
 
                                         <div id="dfrictionSlider" class="mySliders"></div>
                                     </td>
@@ -465,14 +446,9 @@
                             </table>
                         </div>
                     </div>
-
-
                 </div>
-
-
             </section>
             <!-- end modify properties -->
-
 
             <!-- Export application ========================================= -->
             <section id="export-application">
@@ -483,7 +459,6 @@
                         onClick="exportHaml()">Export
                 </button>
                 <ul id="hamlResponse"></ul>
-
             </section>
             <!-- end export application -->
 
@@ -492,12 +467,12 @@
 </div>
 
 
-<!-- Footer
-================================================== -->
+<!-- Footer ================================================== -->
 <footer class="footer">
     <div class="container">
         <p>
-            Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao, Liu Cheng, Haiwei Dong, Hussein AI Osman & Abdulmotaleb EI Saddik 2012 -
+            Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao, Liu Cheng, Haiwei Dong, Hussein AI Osman &
+            Abdulmotaleb EI Saddik 2012 -
             2015
         </p>
 
@@ -513,6 +488,7 @@
         </ul>
     </div>
 </footer>
+<!-- end footer -->
 
 
 <!-- Placed at the end of the document so the pages load faster -->
@@ -522,7 +498,7 @@
 <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
 <script src="assets/js/docs.js" type="text/javascript"></script>
 
+<!-- Customized javascript for index page -->
 <script src="js/index.js" type="text/javascript"></script>
 </body>
-
 </html>

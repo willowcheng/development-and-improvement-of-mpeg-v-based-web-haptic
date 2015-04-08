@@ -841,7 +841,7 @@ inputXml.addEventListener("change", function (event) {
 
     if (xFormdata) {
         $.ajax({
-            url: "upload_file.php",
+            url: "php/upload_model.php",
             type: "POST",
             data: xFormdata,
             processData: false,
@@ -901,7 +901,7 @@ inputXml.addEventListener("change", function (event) {
 
         if (iFormdata) {
             $.ajax({
-                url: "upload.php",
+                url: "php/upload_texture.php",
                 type: "POST",
                 data: iFormdata,
                 processData: false,
