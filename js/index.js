@@ -445,17 +445,6 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-// canvas.onmousewheel = function(e) {
-//   var wheelData = e.detail ? e.detail / 10 : e.wheelDelta / -300;
-//   cameraPos[2] += wheelData;
-//   if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
-//   camera.setLocZ(cameraPos[2]);
-//   camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
-//   render = true;
-// }
-// canvas.addEventListener('DOMMouseScroll', canvas.onmousewheel, false);
-
-
 canvas.oncontextmenu = function (e) {
     return false;
 }
@@ -666,7 +655,6 @@ function addModel() {
     addAnother();
 }
 
-
 function addAnother() {
     modelList.innerHTML = "";
     imgList.innerHTML = "";
@@ -675,11 +663,6 @@ function addAnother() {
     xmlRes.innerHTML = "";
     text.innerHTML = "";
 }
-
-//function reset() {
-//  document.location.reload(true);
-//}
-
 
 function exportHaml() {
     var properties = '{"models":[';
@@ -726,7 +709,7 @@ function exportHaml() {
     properties += ']}';
     console.log(properties);
     $.ajax({
-        url: "exportXml-physics.php" + "?q=" + properties,
+        url: "php/exportXml-physics.php" + "?q=" + properties,
         type: "GET",
         data: properties,
         contentType: "application/json; charset=utf-8",
@@ -737,8 +720,6 @@ function exportHaml() {
             alert(error);
         }
     });
-    //console.log("exportXml.php"+"?q="+properties);
-
 }
 
 
@@ -825,7 +806,7 @@ inputXml.addEventListener("change", function (event) {
                 name.innerHTML = file.name;
                 modelNames[modelCount] = file.name;
                 colladaFile = "uploads/" + file.name;
-                xImage.src = "xmlPic.png";
+                xImage.src = "images/xmlPic.png";
                 xImage.width = 32;
                 xImage.height = 32;
                 li.appendChild(xImage);

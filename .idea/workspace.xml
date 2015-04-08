@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d869c05-08b4-41f2-9be1-15fd84746c96" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/player.css" afterPath="$PROJECT_DIR$/css/player.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.html" afterPath="$PROJECT_DIR$/player.html" />
+      <change type="DELETED" beforePath="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\animations.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\exportXml.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\exportxml-physics.php" afterPath="$PROJECT_DIR$/php/exportxml-physics.php" />
+      <change type="MOVED" beforePath="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\select.png" afterPath="$PROJECT_DIR$/images/select.png" />
+      <change type="MOVED" beforePath="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\xmlPic.png" afterPath="$PROJECT_DIR$/images/xmlPic.png" />
     </list>
     <ignored path="Development and Improvement of MPEG-V Based Web Haptic Application.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +32,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.9811325">
-              <caret line="227" column="8" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="29" />
+            <state vertical-scroll-proportion="-61.132076">
+              <caret line="458" column="43" selection-start-line="458" selection-start-column="33" selection-end-line="458" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#embed#0;n#head#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#meta#2;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -83,6 +87,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="select.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/select.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cubeplane.dae" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cubeplane.dae">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,38 +126,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/upload_model.php">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="-6.37931">
+              <caret line="711" column="18" selection-start-line="711" selection-start-column="18" selection-end-line="711" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="box.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/box.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_texture.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/upload_texture.php">
+      <file leaf-file-name="hapticplayer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/hapticplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4">
-              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="10" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.js">
+      <file leaf-file-name="exportxml-physics.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/exportxml-physics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.724138">
-              <caret line="827" column="30" selection-start-line="827" selection-start-column="30" selection-end-line="827" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xmlPic.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xmlPic.png">
+      <file leaf-file-name="xmlPic.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/xmlPic.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -147,57 +178,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scene.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scene.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="95" selection-end-column="1" />
-              <folding>
-                <element signature="e#51#75#0" expanded="false" />
-                <element signature="e#86#177#0" expanded="false" />
-                <element signature="e#271#976#0" expanded="false" />
-                <element signature="e#1011#1588#0" expanded="false" />
-                <element signature="e#1623#1654#0" expanded="false" />
-                <element signature="e#1671#1698#0" expanded="false" />
-                <element signature="e#1730#1757#0" expanded="false" />
-                <element signature="e#1819#1840#0" expanded="false" />
-                <element signature="e#1854#1876#0" expanded="false" />
-                <element signature="e#1937#1965#0" expanded="false" />
-                <element signature="e#1975#1999#0" expanded="false" />
-                <element signature="e#2016#2063#0" expanded="false" />
-                <element signature="e#2081#2158#0" expanded="false" />
-                <element signature="e#2179#2238#0" expanded="false" />
-                <element signature="e#2258#2339#0" expanded="false" />
-                <element signature="e#2353#2374#0" expanded="false" />
-                <element signature="e#2499#2527#0" expanded="false" />
-                <element signature="e#2554#2600#0" expanded="false" />
-                <element signature="e#2614#2675#0" expanded="false" />
-                <element signature="e#2692#2770#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scenePhysics.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scenePhysics.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -300,15 +280,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application" />
       <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\php" />
       <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\download" />
-      <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application" />
       <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\assets\css\custom-theme\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application" />
       <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\images" />
       <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application\php" />
+      <recent name="D:\Workspace\Web\Development and Improvement of MPEG-V Based Web Haptic Application" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -465,7 +445,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428521085814</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Finish style for player html and associated css">
+      <created>1428522043164</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1428522043164</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -520,27 +506,14 @@
     <MESSAGE value="Add download package for MPEG-V demo" />
     <MESSAGE value="Change scene for larger size of canvas" />
     <MESSAGE value="Finish style for index html and css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish style for index html and css" />
+    <MESSAGE value="Finish style for player html and associated css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish style for player html and associated css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="14" selection-start-line="227" selection-start-column="14" selection-end-line="227" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -951,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/hapticplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -1014,11 +980,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scene.xml">
@@ -1082,10 +1043,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-49.375">
+          <caret line="229" column="10" selection-start-line="229" selection-start-column="10" selection-end-line="229" selection-end-column="10" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#909#1011#0" expanded="false" />
+            <element signature="e#1016#1150#0" expanded="false" />
+            <element signature="e#1354#1467#0" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/xmlPic.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/exportxml-physics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/hapticplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="10" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.37931">
+          <caret line="711" column="18" selection-start-line="711" selection-start-column="18" selection-end-line="711" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/box.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.9811325">
-          <caret line="227" column="8" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="29" />
+        <state vertical-scroll-proportion="-61.132076">
+          <caret line="458" column="43" selection-start-line="458" selection-start-column="33" selection-end-line="458" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#embed#0;n#head#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#meta#2;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -1138,45 +1164,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/player.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-49.375">
-          <caret line="229" column="10" selection-start-line="229" selection-start-column="10" selection-end-line="229" selection-end-column="10" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#909#1011#0" expanded="false" />
-            <element signature="e#1016#1150#0" expanded="false" />
-            <element signature="e#1354#1467#0" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.724138">
-          <caret line="827" column="30" selection-start-line="827" selection-start-column="30" selection-end-line="827" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlPic.png">
+    <entry file="file://$PROJECT_DIR$/images/select.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cubeplane.dae">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
