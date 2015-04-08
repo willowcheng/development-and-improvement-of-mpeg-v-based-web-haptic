@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <embed type="application/x-vnd-haptics" id="pluginobj" style="width:0; height:0"/>
     <meta charset="utf-8">
@@ -9,11 +8,12 @@
     <meta name="description" content="Use haptic player to interact with your application.">
     <meta name="author" content="Liu Cheng">
 
-
+    <!-- GLGE library -->
     <script src="js/glge-compiled-min.js"></script>
     <script src="js/jiglib.js"></script>
-    <script id="HAML_document" type="text/xml"></script>
 
+    <!-- GLGE document XML for scene -->
+    <script id="HAML_document" type="text/xml"></script>
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -40,15 +40,13 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
+    <!-- Customized style for player page -->
     <link href="css/player.css" rel="stylesheet" type="text/css">
-
-
 </head>
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
 
-<!-- Navbar
-================================================== -->
+<!-- Navbar ================================================== -->
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -78,9 +76,9 @@
         </div>
     </div>
 </div>
+<!-- end navbar -->
 
-<!-- Subhead
-=============================================== -->
+<!-- Subhead =============================================== -->
 <header class="bs-header header_background" id="overview">
     <div class="container">
         <h1>Web MPEG-V Haptic Player</h1>
@@ -88,11 +86,11 @@
         <p class="lead">Please follow the instruction to interact with your application.</p>
     </div>
 </header>
-
+<!-- end subhead -->
 
 <div class="container">
-    <!-- Docs nav ================================================== -->
     <div class="row">
+        <!-- Side nav ================================================== -->
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
                 <li><a href="#import-file"><i class="icon-chevron-right"></i> Import MPEG-V File</a>
@@ -104,6 +102,7 @@
                 <li><a href="#add-code"><i class="icon-chevron-right"></i> Add Code</a>
             </ul>
         </div>
+        <!-- end side nav -->
 
         <div class="span9" id="import">
             <!-- Import files ================================================== -->
@@ -111,8 +110,8 @@
                 <div class="page-header">
                     <h2><span class="label label-default">1</span> IMPORT MPEG-V FILE</h2>
                 </div>
-
-                <a id="download" class="download-btn ui-button-primary" href="download/MPEG-V%20Demo.zip">Download Example Application</a>
+                <a id="download" class="download-btn ui-button-primary" href="download/MPEG-V%20Demo.zip">Download
+                    Example Application</a>
                 <br>
                 <input align="center" type="file" name="HAMLImporter" id="HAMLImporter"/>
                 <Button class="ui-button-primary ui-btn-lg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
@@ -133,20 +132,20 @@
                 <div class="window-contain">
                     <div class="slides">
                         <label for="pMass">mass:</label>
-                        <input type="text" id="pMass"/>
+                        <input type="text" id="pMass" class="vertical-slidebar"/>
 
                         <div id="massSlider" class="mySliders"></div>
                     </div>
                     <div class="slides">
                         <label for="pFriction">friction:</label>
-                        <input type="text" id="pFriction"/>
+                        <input type="text" id="pFriction" class="vertical-slidebar"/>
 
                         <div id="fricSlider" class="mySliders"></div>
                     </div>
 
                     <div class="slides">
                         <label for="pRadius">radius:</label>
-                        <input type="text" id="pRadius"/>
+                        <input type="text" id="pRadius" class="vertical-slidebar"/>
 
                         <div id="radiusSlider" class="mySliders"></div>
                     </div>
@@ -207,10 +206,10 @@
 <footer class="footer">
     <div class="contain">
         <p>
-            Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao, Liu Cheng, Haiwei Dong, Hussein AI Osman & Abdulmotaleb EI Saddik 2012 -
+            Web MPEG-V Haptic Authoring Tool and Player &copy; Yu Gao, Liu Cheng, Haiwei Dong, Hussein AI Osman &
+            Abdulmotaleb EI Saddik 2012 -
             2015
         </p>
-
         <p>
             jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
         </p>
@@ -232,6 +231,7 @@
 <script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
 <script src="assets/js/docs.js" type="text/javascript"></script>
 
+<!-- Customized javascript for haptic player page -->
 <script src="js/hapticplayer.js" type="text/javascript"></script>
 </body>
 

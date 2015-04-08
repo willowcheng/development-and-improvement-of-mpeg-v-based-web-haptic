@@ -61,3 +61,9 @@ textarea {
 #download {
     margin-bottom: 12px;
 }
+
+.vertical-slidebar {
+    border: 0px;
+    width: 8px;
+    font-weight: bold;
+}
