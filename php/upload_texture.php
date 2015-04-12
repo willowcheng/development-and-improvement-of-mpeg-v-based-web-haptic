@@ -7,6 +7,6 @@ foreach ($_FILES["images"]["error"] as $key => $error) {
         move_uploaded_file( $_FILES["images"]["tmp_name"][$key], "uploads/" . $_FILES['images']['name'][$key]);
     }
 }
-echo "<h4>Successfully Uploaded Images</h4>";
+echo "<h4>Successfully Uploaded Textures</h4>";
 
 ?>

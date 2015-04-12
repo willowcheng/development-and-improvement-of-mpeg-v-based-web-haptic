@@ -268,16 +268,6 @@ function view() {
       render = true;
     }
   });
-  // canvas.onmousewheel = function(e) {
-  //   var wheelData = e.detail ? e.detail / 10 : e.wheelDelta / -300;
-  //   cameraPos[2] += wheelData;
-  //   if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
-  //   camera.setLocZ(cameraPos[2]);
-  //   camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
-  //   render = true;
-  // }
-  // canvas.addEventListener('DOMMouseScroll', canvas.onmousewheel, false);
-
 
   canvas.oncontextmenu = function(e) {
     return false;
@@ -314,7 +304,7 @@ function view() {
 
 
   var doc = new GLGE.Document();
-  proxy.setDocument("sphere.dae");
+  proxy.setDocument("models/sphere.dae");
   proxy.setScale(0.5);
   var proxyPos = [proxy.getLocX(), proxy.getLocY(), proxy.getLocZ()];
 

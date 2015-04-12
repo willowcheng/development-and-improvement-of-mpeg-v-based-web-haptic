@@ -776,7 +776,7 @@ function handleDrop(event) {
         }
         if (dFormdata) {
             $.ajax({
-                url: "upload.php",
+                url: "../php/upload_texture.php",
                 type: "POST",
                 data: dFormdata,
                 processData: false,
