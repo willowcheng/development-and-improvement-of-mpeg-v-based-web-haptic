@@ -55,11 +55,12 @@ for($i=0;$i< sizeof($arr);$i++){
   //var_dump($models);
 }
 $doc = new DOMDocument();
-$doc->load("scenePhysics.xml");
+$doc->load("xml/scenePhysics.xml");
 $doc->formatOutput = true;
 $scene = $doc->getElementsByTagName("scene");
 $colgroup = $doc->getElementsByTagname('group');
-$vwo = $doc->getElementsByTagName("VirtualObjectList");
+$vwo = $doc->getElementsByTagNa
+e("VirtualObjectList");
 $type = $doc->getElementsByTagName("sceneType");
 foreach($type as $one){
   $one->appendChild(
