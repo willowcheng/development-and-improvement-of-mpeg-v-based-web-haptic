@@ -1,7 +1,14 @@
-.slides {
-    float: left;
-    margin-right: 16px;
+/* Base Styles ---------------------------- */
+
+h1 {
+    font-size: 48px;
 }
+
+textarea {
+    width: 100%;
+}
+
+/* Modifies jQuery UI Bootstrap Styles ---------------------------- */
 
 .header_background {
     position: relative;
@@ -21,10 +28,6 @@
     background-color: initial;
     box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
     margin-top: -19px;
-}
-
-h1 {
-    font-size: 48px;
 }
 
 .bs-docs-sidenav > li.active > a {
@@ -48,18 +51,32 @@ h1 {
     padding: 15px 15px;
 }
 
+/* Layout Styles ----------------------------- */
+
+#sidebar {
+    float: right;
+}
+
+.slides {
+    float: left;
+    margin-right: 16px;
+}
+
+/* Main Styles ----------------------------- */
+
+#download {
+    margin-bottom: 12px;
+}
+
+#preview-title {
+    text-align: center;
+    color: #2196F3;
+}
+
 .label {
     padding: 0.4em 0.4em 0.4em 0.4em;
     border-radius: 0px;
     font-size: 24px;
-}
-
-textarea {
-    width: 100%;
-}
-
-#download {
-    margin-bottom: 12px;
 }
 
 .vertical-slidebar {

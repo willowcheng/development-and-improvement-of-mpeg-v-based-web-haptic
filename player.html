@@ -91,20 +91,25 @@
 <div class="container">
     <div class="row">
         <!-- Side nav ================================================== -->
-        <div class="span3 bs-docs-sidebar">
+        <div id="sidebar" class="span7 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#import-file"><i class="icon-chevron-right"></i> Import MPEG-V File</a>
+                <li><a href="#import-file"><i class="icon-chevron-left"></i> Import MPEG-V File</a>
                 </li>
-                <li><a href="#proxy-properties"><i class="icon-chevron-right"></i> Proxy Properties</a>
+                <li><a href="#proxy-properties"><i class="icon-chevron-left"></i> Proxy Properties</a>
                 </li>
-                <li><a href="#view-application"><i class="icon-chevron-right"></i> View Application</a>
-                </li>
-                <li><a href="#add-code"><i class="icon-chevron-right"></i> Add Code</a>
+                <li><a href="#add-code"><i class="icon-chevron-left"></i> Add Code</a>
+
+                    <!-- View scene ================================================== -->
+                    <section>
+                        <h3 id="preview-title">PREVIEW</h3>
+                        <canvas id="canvas" width="640px" height="400px"></canvas>
+                    </section>
+                    <!-- end view scene -->
             </ul>
         </div>
         <!-- end side nav -->
 
-        <div class="span9" id="import">
+        <div class="span5" id="import">
             <!-- Import files ================================================== -->
             <section id="import-file">
                 <div class="page-header">
@@ -114,6 +119,7 @@
                     Example Application</a>
                 <br>
                 <input align="center" type="file" name="HAMLImporter" id="HAMLImporter"/>
+                <br><br>
                 <Button class="ui-button-primary ui-btn-lg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
                         onClick="view()">View Haptic Scene
                 </Button>
@@ -154,16 +160,6 @@
             <!-- end proxy properties -->
 
 
-            <!-- View application ============================================= -->
-            <section id="view-application">
-                <div class="page-header">
-                    <h2><span class="label label-default">3</span> VIEW YOUR APPLICATION</h2>
-                </div>
-                <canvas id="canvas" width="800px" height="500px"></canvas>
-            </section>
-            <!-- end view application -->
-
-
             <!-- Add code ======================================================= -->
             <section id="add-code">
                 <div class="page-header">
@@ -201,8 +197,7 @@
     </div>
 </div>
 
-<!-- Footer
-      ================================================== -->
+<!-- Footer ================================================== -->
 <footer class="footer">
     <div class="contain">
         <p>
@@ -210,6 +205,7 @@
             Abdulmotaleb EI Saddik 2012 -
             2015
         </p>
+
         <p>
             jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
         </p>
