@@ -1,3 +1,4 @@
+/* Variables declaration */
 GLGE.DEBUGCOORD0 = false;
 var animIndex;
 var typeIndex;
@@ -7,6 +8,7 @@ var colladaFiles = new Array();
 var textureFiles = new Array();
 var textureFile = " ";
 
+/* Initialize variables of parameters */
 function modelProp(locx, locy, locz, rotx, roty, rotz, scaleX, scaleY, scaleZ, anim, type, mass, stif, damping, sfriction, dfriction, props) {
     this.locX = locx;
     this.locY = locy;
@@ -29,10 +31,11 @@ function modelProp(locx, locy, locz, rotx, roty, rotz, scaleX, scaleY, scaleZ, a
 
 
 $(function () {
-    //$('.radioset').buttonset();
-    //$( "#accordion" ).accordion();
-    $("#physicselectable").selectable();
-    $("#locxSlider").slider({
+
+    $("#physicselectable").selectable(); // construct physics selectable vertical slider
+
+    /* Graphic Properties */
+    $("#locxSlider").slider({ // Use jQuery API to construct location X slider
         min: -20,
         max: 20,
         value: 0,
@@ -45,7 +48,9 @@ $(function () {
         }
     });
     $("#plocX").val($("#locxSlider").slider("value"));
-    $("#locySlider").slider({
+
+
+    $("#locySlider").slider({ // Use jQuery API to construct location Y slider
         min: -20,
         max: 20,
         value: 0,
@@ -58,7 +63,8 @@ $(function () {
         }
     });
     $("#plocY").val($("#locySlider").slider("value"));
-    $("#loczSlider").slider({
+
+    $("#loczSlider").slider({ // Use jQuery API to construct location Z slider
         min: 0,
         max: 20,
         value: 0,
@@ -71,7 +77,8 @@ $(function () {
         }
     });
     $("#plocZ").val($("#loczSlider").slider("value"));
-    $("#rotxSlider").slider({
+
+    $("#rotxSlider").slider({ // Use jQuery API to construct rotation X slider
         min: -314,
         max: 314,
         value: 0,
@@ -84,7 +91,8 @@ $(function () {
         }
     });
     $("#protX").val($("#rotxSlider").slider("value") / 100);
-    $("#rotySlider").slider({
+
+    $("#rotySlider").slider({ // Use jQuery API to construct rotation Y slider
         min: -314,
         max: 314,
         value: 0,
@@ -97,7 +105,8 @@ $(function () {
         }
     });
     $("#protY").val($("#rotySlider").slider("value") / 100);
-    $("#rotzSlider").slider({
+
+    $("#rotzSlider").slider({ // Use jQuery API to construct rotation Z slider
         min: -314,
         max: 314,
         value: 0,
@@ -110,7 +119,8 @@ $(function () {
         }
     });
     $("#protZ").val($("#rotzSlider").slider("value") / 100);
-    $("#scaleXSlider").slider({
+
+    $("#scaleXSlider").slider({ // Use jQuery API to construct scale X slider
         min: 0,
         max: 100,
         value: 10,
@@ -123,7 +133,8 @@ $(function () {
         }
     });
     $("#pscaleX").val($("#scaleXSlider").slider("value") / 10);
-    $("#scaleYSlider").slider({
+
+    $("#scaleYSlider").slider({ // Use jQuery API to construct scale Y slider
         min: 0,
         max: 100,
         value: 10,
@@ -136,7 +147,8 @@ $(function () {
         }
     });
     $("#pscaleY").val($("#scaleYSlider").slider("value") / 10);
-    $("#scaleZSlider").slider({
+
+    $("#scaleZSlider").slider({ // Use jQuery API to construct scale Z slider
         min: 0,
         max: 100,
         value: 10,
@@ -149,7 +161,9 @@ $(function () {
         }
     });
     $("#pscaleZ").val($("#scaleZSlider").slider("value") / 10);
-    $("#stiffnessSlider").slider({
+
+    /* Haptic Properties */
+    $("#stiffnessSlider").slider({ // Use jQuery API to construct stiffness slider
         min: 0,
         max: 100,
         value: 0,
@@ -162,7 +176,8 @@ $(function () {
         }
     });
     $("#pstiffness").val($("#stiffnessSlider").slider("value") / 100);
-    $("#dampingSlider").slider({
+
+    $("#dampingSlider").slider({ // Use jQuery API to construct damping slider
         min: 0,
         max: 100,
         value: 0,
@@ -175,7 +190,8 @@ $(function () {
         }
     });
     $("#pdamping").val($("#dampingSlider").slider("value") / 100);
-    $("#sfrictionSlider").slider({
+
+    $("#sfrictionSlider").slider({ // Use jQuery API to construct s.friction slider
         min: 0,
         max: 100,
         value: 0,
@@ -188,7 +204,8 @@ $(function () {
         }
     });
     $("#psfrictions").val($("#sfrictionSlider").slider("value") / 100);
-    $("#dfrictionSlider").slider({
+
+    $("#dfrictionSlider").slider({ // Use jQuery API to construct d.friction slider
         min: 0,
         max: 100,
         value: 0,
@@ -200,25 +217,24 @@ $(function () {
             set();
         }
     });
-
     $("#pdfrictions").val($("#dfrictionSlider").slider("value") / 100);
-    // TODO
-    //$("input[type=submit],input[type=file],  a, button").button();
+
     $("input[type=submit],input[type=file], button").button();
-    $("#animselectable").selectable({
+
+    $("#animselectable").selectable({ // Animation selectable construction for assigning animation
         stop: function () {
-            //var result = $( "#select-result" ).empty();
             $(".ui-selected", this).each(function () {
                 animIndex = $("#animselectable li").index(this);
                 set();
             });
         }
     });
-    $("#physicselectable").selectable({
+
+    $("#physicselectable").selectable({ // Physics selectable construction for assigning physics
         stop: function () {
             $(".ui-selected", this).each(function () {
                 typeIndex = $("#physicselectable li").index(this);
-                //console.log(typeIndex);
+
                 switch (typeIndex) {
                     case 0:
                         $("#planeEditor").show();
@@ -248,9 +264,8 @@ $(function () {
             });
         }
     });
-    //$(".ui-slider").css({"width": "1.2em", "height": "1.2em" ,"top": "-0.3em" });
-    //$(".ui-widget-content").css({"margin":"-15px"});
-    $("#distanceSlider").slider({
+
+    $("#distanceSlider").slider({ // Distance slider construction
         min: 0,
         max: 10,
         value: 0,
@@ -263,7 +278,8 @@ $(function () {
         }
     });
     $("#pDistance").val($("#distanceSlider").slider("value"));
-    $("#normalSlider").slider({
+
+    $("#normalSlider").slider({ // Normal slider construction
         min: 0,
         max: 10,
         value: 0,
@@ -276,7 +292,8 @@ $(function () {
         }
     });
     $("#pNormal").val($("#normalSlider").slider("value"));
-    $("#radiusSlider").slider({
+
+    $("#radiusSlider").slider({ // Radius slider construction
         min: 0,
         max: 10,
         value: 0,
@@ -289,7 +306,8 @@ $(function () {
         }
     });
     $("#pRadius").val($("#radiusSlider").slider("value"));
-    $("#widthSlider").slider({
+
+    $("#widthSlider").slider({ // Width slider construction
         min: 0,
         max: 10,
         value: 0,
@@ -302,7 +320,8 @@ $(function () {
         }
     });
     $("#pWidth").val($("#widthSlider").slider("value"));
-    $("#depthSlider").slider({
+
+    $("#depthSlider").slider({ // Depth slider construction
         min: 0,
         max: 10,
         value: 0,
@@ -315,7 +334,8 @@ $(function () {
         }
     });
     $("#pDepth").val($("#depthSlider").slider("value"));
-    $("#heightSlider").slider({
+
+    $("#heightSlider").slider({ // Height slider construction
         min: 0,
         max: 10,
         value: 0,
@@ -329,7 +349,7 @@ $(function () {
     });
     $("#pHeight").val($("#heightSlider").slider("value"));
 
-    $("#massSlider").slider({
+    $("#massSlider").slider({ // Mass slider construction
         min: 0,
         max: 20,
         value: 0,
@@ -343,15 +363,16 @@ $(function () {
     });
     $("#pMass").val($("#massSlider").slider("value"));
 
+    /* Hide Sphere, Plane, Mesh and Box editors as default*/
     $("#sphereEditor").hide();
     $("#planeEditor").hide();
     $("#meshEditor").hide();
     $("#boxEditor").hide();
-    $("#menu-collapse").accordion({
+
+    $("#menu-collapse").accordion({ // Set headers as "Graphic" and "Haptic" for collapse
         header: "h3"
     });
 });
-
 
 var lookAt = function (origin, point) {
     var coord = [origin[0] - point[0], origin[1] - point[1], origin[2] - point[2]];
@@ -366,24 +387,22 @@ var lookAt = function (origin, point) {
 }
 
 
-var canvas = document.getElementById("canvas");
+var canvas = document.getElementById("canvas"); // Get "canvas" into canvas variable
 
 
 var aModel = new Array();
 var bModel = new Array();
 var modelCount = 0;
-var doc = new GLGE.Document();
 var text = document.getElementById("dragText");
 var selectNumber = 0;
 var selectedObject;
 
 var dFormdata = false;
 var xFormdata = false;
-var iFormdata = false;
 var inputXml = document.getElementById("xml");
-var imageFile;
 var colladaFile;
 
+/* Set lists variables*/
 var modelList = document.getElementById("model-list");
 var fileList = document.getElementById("fileList");
 var imgList = document.getElementById("image-list");
@@ -391,12 +410,13 @@ var xmlRes = document.getElementById("xmlResponse");
 
 var drag = false;
 var view = false;
-var rotY = 0;
 var startpoint;
 var cameraPos = [10, 5, 20];
 var mousePos = [0, 0];
 var mousestate = 0;
 var mousechange = false;
+
+/* Adjust canvas view point by motion of mouse */
 canvas.onmousedown = function (e) {
     mousechange = true;
     mousestate = 1;
@@ -406,11 +426,13 @@ canvas.onmousedown = function (e) {
     }
     e.preventDefault();
 }
+
 canvas.onmouseup = function (e) {
     mousechange = true;
     mousestate = 0;
     view = false;
 }
+
 canvas.onmousemove = function (e) {
     mousechange = true;
     mousePos = [e.clientX, e.clientY];
@@ -427,7 +449,7 @@ canvas.onmousemove = function (e) {
 
 // Use '<' and '>' to control the view distance of scene
 document.addEventListener('keydown', function (event) {
-    if (event.keyCode == 188) {
+    if (event.keyCode == 188) { // '<' key
         var wheelData = 0.2;
         cameraPos[2] += wheelData;
         if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
@@ -435,7 +457,7 @@ document.addEventListener('keydown', function (event) {
         camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
         render = true;
     }
-    else if (event.keyCode == 190) {
+    else if (event.keyCode == 190) { // '>' key
         var wheelData = -0.2;
         cameraPos[2] += wheelData;
         if (cameraPos[2] < 1 && cameraPos[2] > -1) cameraPos[2] = cameraPos[2] / Math.abs(cameraPos[2]);
@@ -448,6 +470,7 @@ document.addEventListener('keydown', function (event) {
 canvas.oncontextmenu = function (e) {
     return false;
 }
+
 var renderer = new GLGE.Renderer(canvas);
 
 var doc = new GLGE.Document();
@@ -459,18 +482,21 @@ var animations = new Array();
 animations = ['bob', 'disappear'];
 
 doc.onLoad = function () {
+
+    // Add animations for selecting
     animationVector = [0, doc.getElement("flow"), doc.getElement("circle"), doc.getElement("bob"), doc.getElement("spin"), doc.getElement("disappear")];
+
+    // Link related objects from doc
     scene = doc.getElement("mainscene");
     camera = doc.getElement("mainCamera");
     cameraOffset = doc.getElement("cameraOffset");
     var highlight = doc.getElement("highlight");
 
-
     camera.setRotMatrix(lookAt([0, cameraPos[1], 0], [0, 0, -cameraPos[2]]));
     cameraOffset.setRotY(cameraPos[0] / 10);
     cameraOffset.setLocY(cameraPos[1]);
 
-    //draw grid
+    // Draw grid in canvas
     var positions = [];
     for (var x = -50; x < 50; x++) {
         if (x != 0) {
@@ -488,7 +514,6 @@ doc.onLoad = function () {
             positions.push(x);
         }
     }
-
     var line = (new GLGE.Object).setDrawType(GLGE.DRAW_LINES);
     line.setMesh((new GLGE.Mesh).setPositions(positions));
     line.setMaterial(doc.getElement("lines"));
@@ -496,7 +521,7 @@ doc.onLoad = function () {
 
     var lastPick = null;
     var selectstart = null;
-    //pick obj in the scene
+    // Pick object in the scene
     var picking = function () {
         if (!mousechange) return;
         var rect = canvas.getBoundingClientRect();
@@ -504,7 +529,6 @@ doc.onLoad = function () {
         y = mousePos[1] - rect.top;
         var result = scene.pick(x, y);
         if (result && result.object.id) {
-
             if (!result.object.mat) result.object.mat = result.object.getMaterial();
             if (lastPick != result.object) {
                 if (lastPick) lastPick.setMaterial(lastPick.mat);
@@ -540,25 +564,24 @@ doc.onLoad = function () {
 
         lasttime = now;
         requestAnimationFrame(render);
-        //	console.log(aModel[0].getLocX());
     };
     requestAnimationFrame(render);
 }
+
 
 doc.parseScript("glge_document");
 var cusrsor = doc.getElement("cusrsor");
 var selectObject = function (obj) {
     if (obj == selectedObject) return;
     selectedObject = obj;
-    //selectNumber = obj.getId();
     cusrsor.blendTo({
         LocX: obj.getLocX(),
         LocZ: obj.getLocZ()
     }, 1000);
 }
 
+/* Set values for different elements */
 function set() {
-    //var model = aModel[selectNumber];
     var model = selectedObject;
     var locX = document.getElementById("plocX").value;
     var locY = document.getElementById("plocY").value;
@@ -569,7 +592,6 @@ function set() {
     var rotX = document.getElementById("protX").value;
     var rotY = document.getElementById("protY").value;
     var rotZ = document.getElementById("protZ").value;
-    var animation = animIndex;
     var stiffness = document.getElementById("pstiffness").value;
     var damping = document.getElementById("pdamping").value;
     var sfrictions = document.getElementById("psfrictions").value;
@@ -614,18 +636,16 @@ function set() {
     modelProperties[selectNumber] = prop;
 }
 
-
+/* Function for adding models */
 function addModel() {
     var model = new GLGE.Collada();
     doc.getElement("mainscene").addCollada(model);
     var locX = document.getElementById("plocX").value;
     var locY = document.getElementById("plocY").value;
     var locZ = document.getElementById("plocZ").value;
-    //var scale = document.getElementById("pscale").value;
     model.setLocY(locY);
     model.setLocX(locX);
     model.setLocZ(locZ);
-    //model.setScale(scale);
     model.setId(modelCount);
     model.setDocument(colladaFile);
     var xmlhttp = new XMLHttpRequest();
@@ -655,6 +675,7 @@ function addModel() {
     addAnother();
 }
 
+// Clear data in lists
 function addAnother() {
     modelList.innerHTML = "";
     imgList.innerHTML = "";
@@ -664,6 +685,7 @@ function addAnother() {
     text.innerHTML = "";
 }
 
+/* function for exporting HAML application file in xml */
 function exportHaml() {
     var properties = '{"models":[';
     for (i = 0; i < aModel.length; i++) {
@@ -722,31 +744,31 @@ function exportHaml() {
     });
 }
 
-
+/* Eliminate upload buttons for uploading */
 function addDNDListeners() {
     var container = document.getElementById("container");
-    // add dragenter listener
+    // Add dragEnter listener
     container.addEventListener("dragenter", function (event) {
         fileList.innerHTML = '';
         event.stopPropagation();
         event.preventDefault();
     }, false);
-    // drag over event
+    // Drag over event
     container.addEventListener("dragover", function (event) {
         event.stopPropagation();
         event.preventDefault();
     }, false);
-    // drop event
+    // Drop event
     container.addEventListener("drop", handleDrop, false);
 }
 window.addEventListener("load", addDNDListeners, false);
 
 function handleDrop(event) {
-    // get drop file list
+    // Get drop file list
     var files = event.dataTransfer.files;
     event.stopPropagation();
     event.preventDefault();
-    // show upload progress and img
+    // Show upload progress and img
     for (var i = 0; i < files.length; i++) {
         var file = files[i];
         if (window.FormData) {
@@ -774,7 +796,7 @@ function handleDrop(event) {
                 dFormdata.append("images[]", file);
             }
         }
-        if (dFormdata) {
+        if (dFormdata) { // Upload texture files
             $.ajax({
                 url: "../php/upload_texture.php",
                 type: "POST",
@@ -820,7 +842,7 @@ inputXml.addEventListener("change", function (event) {
         }
     }
 
-    if (xFormdata) {
+    if (xFormdata) { // Upload models
         $.ajax({
             url: "php/upload_model.php",
             type: "POST",
@@ -839,9 +861,6 @@ inputXml.addEventListener("change", function (event) {
     var input = document.getElementById("images"),
         iFormdata = false;
 
-    function showUploadedItem(source) {
-    }
-
     if (window.FormData) {
         iFormdata = new FormData();
         document.getElementById("btn").style.display = "none";
@@ -851,8 +870,7 @@ inputXml.addEventListener("change", function (event) {
         document.getElementById("response").innerHTML = "UPLOADING"
         var i = 0,
             len = this.files.length,
-            img, xml, reader, file;
-
+            img, reader, file;
 
         for (; i < len; i++) {
             file = this.files[i];
@@ -880,7 +898,7 @@ inputXml.addEventListener("change", function (event) {
             }
         }
 
-        if (iFormdata) {
+        if (iFormdata) { // UPload texture files
             $.ajax({
                 url: "php/upload_texture.php",
                 type: "POST",
